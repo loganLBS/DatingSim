@@ -1,0 +1,12 @@
+﻿title: Test
+---
+Bimbo: Hello World!
+-> Ur a stupid Whore
+   Bimbo: i am, yes
+   <<jump End>>
+===
+
+title: End
+---
+Bimbo: kil me already
+===
