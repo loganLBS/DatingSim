@@ -1,6 +1,7 @@
 ﻿title: Test
 ---
 Bimbo: Hello World!
+<<declare $player_name = " " as string>>
 -> Ur a stupid Whore
    Bimbo: i am, yes
    <<jump End>>
