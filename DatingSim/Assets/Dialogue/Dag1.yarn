@@ -1,15 +1,55 @@
 ﻿title: D1_MC_Start1
 ---
+<<set $playerName = "Player">>
 *It's my first day in my new school and I heard there's a lot of pretty girls here!* 
  What I really want from this year is to get a girlfriend. but first i should...*
+ someone bumps into you
  ???: Sorry, are you hurt?
 Mc: No i-i'm fine *touches back of neck*
-Cassie: That’s good! You must be the new guy? 
+???: That’s good! You must be the new guy? 
 Cassie: I'm Cassie! [Character card] 
 Cassie: What’s your name handsome?
-Mc: Yeah, the names [player chooses name]
+    <<ShowNameInput SceneManager>>
+    <<wait 3>>>
 Cassie: You must be heading to the reception, right? 
 Cassie: It’s the first door to the right when you enter the school. 
 Cassie: I'm late so gotta run! Bye-bye!! [waves]
 Mc: B-Bye [waves back]
+<<jump D1_N_Reception1>>
+===
+
+title: D1_N_Reception1
+---
+A tall girl with glasses waits next to the desk. You make eye contact.
+???: Hello.. Are you {$playerName}? I was supposed to show you around the school.
+Mc: That’s right.
+???: Good. I was starting to think you got lost.
+She adjusts her glasses, studying you carefully.
+Nancy: I’m Nancy, student council vice president.[Character card] 
+Nancy: I’ll be your guide today.
+*Vice president already… She looks strict.*
+Nancy: Follow me. Lunch starts in thirty minutes, and this place is bigger than it looks.
+She turns without waiting to see if you agree.
+<<jump D1_E_Cafeteria1>>
+===
+
+title: D1_E_Cafeteria1
+---
+[At reception] You say bye to Nancy as you make your way to the cafeteria for lunch.
+[hallway] *Bumps into something*
+???: Hey! watch where you're going, idiot!
+Mc: *looking down* Sorry didnt see you..
+???: You have eyes for a reason morron. Hmph 
+???: Get out of my way, germfest.
+*what’s her problem.*
+    <<wait 2>>
+[Cafeteria] Searching for a table to sit at you find a girl sitting all alone.
+Mc: Excuse me, can I sit here?
+???: *Looks up from her papers* Sure.
+Mc: So what are you reading?
+???: Some stuff about the occult, I'm not sure you will find this interesting..
+    ->(Plus points) No, I would love to hear! 
+    ->(Neutral) Not really my thing.
+    ->(Negative points) Who even reads that crap?
+
 ===
