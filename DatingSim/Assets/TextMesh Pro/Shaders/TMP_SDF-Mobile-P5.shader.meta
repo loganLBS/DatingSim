@@ -1,5 +1,7 @@
 fileFormatVersion: 2
-guid: 2dfe20bbdbf19ee43903e95a4c521d7a
+guid: a6209ff35a3c0f84e947ef21a6474191
+labels:
+- Font
 ShaderImporter:
   externalObjects: {}
   defaultTextures: []
