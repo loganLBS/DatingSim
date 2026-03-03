@@ -625,6 +625,7 @@ GameObject:
   m_Component:
   - component: {fileID: 609926501}
   - component: {fileID: 609926503}
+  - component: {fileID: 609926504}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -662,6 +663,25 @@ MonoBehaviour:
   namePanel: {fileID: 37638983}
   nameInputField: {fileID: 167964874}
   dialogueRunner: {fileID: 1313636554}
+--- !u!114 &609926504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609926499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbe9105c41bb17242a5caf469d560820, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DTSMiddleman
+  Day: 0
+  cassieTrust: 0
+  bebeTrust: 0
+  nancyTrust: 0
+  emikoTrust: 0
+  takikoTrust: 0
+  sashaTrust: 0
 --- !u!224 &669918847 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2355361765340444347, guid: 52571f68872914e24837210513edea1d, type: 3}
