@@ -15,6 +15,7 @@ public class DTSMiddleman : MonoBehaviour
     public void NextDay()
     {
         Day++;
+        Debug.Log("day increased to " + Day);
     }
 
     public void ctUP()
