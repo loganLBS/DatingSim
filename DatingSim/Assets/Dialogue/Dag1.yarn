@@ -1,20 +1,21 @@
 ﻿title: D1_MC_Start1
 ---
 <<set $playerName = "Player">>
-*It's my first day in my new school and I heard there's a lot of pretty girls here!* 
- What I really want from this year is to get a girlfriend. but first i should...*
- someone bumps into you
+<<NextDay SceneManager>>
+{$playerName}: *It's my first day in my new school and I heard there's a lot of pretty girls here!* 
+ {$playerName}: *What I really want from this year is to get a girlfriend. but first i should...*
+ Someone bumps into you
  ???: Sorry, are you hurt?
-Mc: No i-i'm fine *touches back of neck*
+{$playerName}: No i-i'm fine
 ???: That’s good! You must be the new guy? 
-Cassie: I'm Cassie! [Character card] 
+Cassie: I'm Cassie!
 Cassie: What’s your name handsome?
     <<ShowNameInput SceneManager>>
     <<wait 3>>>
-Cassie: You must be heading to the reception, right? 
-Cassie: It’s the first door to the right when you enter the school. 
-Cassie: I'm late so gotta run! Bye-bye!! [waves]
-Mc: B-Bye [waves back]
+Cassie: Ok {$playerName}, you must be heading to the reception, right? 
+Cassie: It’s the first door on the right when you enter the school. 
+Cassie: I'm late so gotta run! Bye-bye!! 
+{$playerName}: B-Bye
 <<jump D1_N_Reception1>>
 ===
 
@@ -22,12 +23,12 @@ title: D1_N_Reception1
 ---
 A tall girl with glasses waits next to the desk. You make eye contact.
 ???: Hello.. Are you {$playerName}? I was supposed to show you around the school.
-Mc: That’s right.
+{$playerName}: That’s right.
 ???: Good. I was starting to think you got lost.
 She adjusts her glasses, studying you carefully.
 Nancy: I’m Nancy, student council vice president.[Character card] 
 Nancy: I’ll be your guide today.
-*Vice president already… She looks strict.*
+{$playerName}: *Vice president already… She looks strict.*
 Nancy: Follow me. Lunch starts in thirty minutes, and this place is bigger than it looks.
 She turns without waiting to see if you agree.
 <<jump D1_E_Cafeteria1>>
@@ -36,20 +37,93 @@ She turns without waiting to see if you agree.
 title: D1_E_Cafeteria1
 ---
 [At reception] You say bye to Nancy as you make your way to the cafeteria for lunch.
-[hallway] *Bumps into something*
+[hallway] You bump into something
 ???: Hey! watch where you're going, idiot!
-Mc: *looking down* Sorry didnt see you..
+{$playerName}: Sorry didnt see you..
 ???: You have eyes for a reason morron. Hmph 
 ???: Get out of my way, germfest.
-*what’s her problem.*
-    <<wait 2>>
+{$playerName}: *what’s her problem.*
+    <<wait 1>>
 [Cafeteria] Searching for a table to sit at you find a girl sitting all alone.
-Mc: Excuse me, can I sit here?
-???: *Looks up from her papers* Sure.
-Mc: So what are you reading?
+{$playerName}: Excuse me, can I sit here?
+She looks up from her papers
+???: Sure.
+{$playerName}: So what are you reading?
 ???: Some stuff about the occult, I'm not sure you will find this interesting..
     ->(Plus points) No, I would love to hear! 
+        <<jump D1_E_Positive1>>
     ->(Neutral) Not really my thing.
+        <<jump D1_E_Neutral1>>
     ->(Negative points) Who even reads that crap?
+        <<jump D1_E_Negative1>>
+
+===
+
+title: D1_E_Positive1
+---
+{$playerName}: Actually, it sounds kind of cool.
+???: ...Really?
+She looks surprised, then slightly pleased.
+???: Most people laugh when I mention it.
+{$playerName}: Why would I? It sounds mysterious.
+She pauses, studying your face like she’s checking if you’re joking.
+???: ...You’re serious.
+Her shoulders relax slightly.
+???: That’s rare.
+{$playerName}: So what kind of occult stuff are we talking about?
+???: Mostly folklore, symbols, old rituals. Nothing dangerous.
+A small pause.
+???: Probably.
+{$playerName}: *Probably?*
+Emiko: I’m Emiko, by the way. 
+She gives a small, polite nod.
+A bell can be heard
+Emiko: If you wanna catch a break and talk about some occult things you can usually find me in the library. See you later?
+Emiko is gesturing for your name
+{$playerName}: {$playerName}
+Emiko: {$playerName}, catch you later. 
+
+===
+
+title: D1_E_Neutral1
+---
+{$playerName}: Not really my thing, but that’s cool. What’s your name?
+???: No I get that, my name's Emiko, you?
+ {$playerName}: I’m {$playerName}.
+Emiko: Nice to meet you, {$playerName}.
+She gives a small nod, dark bangs shifting slightly.
+{$playerName} (thought): She looks intimidating… but she’s actually pretty chill.
+Emiko: So, first day nerves yet? Or are you one of those people who just walks into new places like you own them?
+{$playerName}: I think I’m somewhere in between. I’m nervous… just trying not to show it.
+Emiko: Honest answer. Rare.
+She tilts her head slightly, studying you.
+Emiko: Most people either brag or lie.
+{$playerName}: Which one do you do?
+Emiko: Neither. I just observe.
+There’s a brief pause as a bell can be heard.
+{$playerName} (thought): She talks like she’s analyzing a science experiment.
+Emiko: You don’t seem boring, though. That’s a good start.
+{$playerName}: I’ll take that as a compliment.
+Emiko: You should. I don’t give those often.
+She gestures down the corridor.
+Emiko: Class is about to start, we should get going.
+
+===
+
+title: D1_E_Negative1
+---
+{$playerName}: Who even reads that crap?
+Silence.
+Her expression freezes. The air suddenly feels colder.
+???: ...I see.
+Her eyes turn cold. When she speaks again, her voice is calm, too calm.
+???: Thank you for your honest opinion.
+{$playerName}: *That did not come out how I meant it.*
+???: In that case, I won’t waste your time explaining it.
+She turns slightly, as if ready to leave.
+{$playerName}: Wait, I…
+???: My class is about to start.
+She starts walking, posture perfectly straight.
+{$playerName}: *Great. First day, and I already offended someone.*
 
 ===
