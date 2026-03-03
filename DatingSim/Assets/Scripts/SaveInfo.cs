@@ -4,10 +4,10 @@ using UnityEngine;
 public class SaveInfo
 {
     public int Day;
-    public int cassieTrust;
-    public int bebeTrust;
-    public int nancyTrust;
-    public int emikoTrust;
-    public int takikoTrust;
-    public int sashaTrust;     
+    public float cassieTrust;
+    public float bebeTrust;
+    public float nancyTrust;
+    public float emikoTrust;
+    public float takikoTrust;
+    public float sashaTrust;     
 }

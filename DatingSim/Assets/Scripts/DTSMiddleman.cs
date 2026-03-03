@@ -10,7 +10,24 @@ public class DTSMiddleman : MonoBehaviour
     public float emikoTrust = 0;
     public float takikoTrust = 0;
     public float sashaTrust = 0;
-    
+
+    [YarnCommand("Save")]
+    public void SaveGame()
+    {
+        SaveInfo data = new SaveInfo
+        {
+            Day = Day,
+            cassieTrust = (float)cassieTrust,
+            bebeTrust = (float)bebeTrust,
+            nancyTrust = (float)nancyTrust,
+            emikoTrust = (float)emikoTrust,
+            takikoTrust = (float)takikoTrust,
+            sashaTrust = (float)sashaTrust,
+        };
+
+        SaveFunction.Save(data);
+    }
+
     [YarnCommand("NextDay")]
     public void NextDay()
     {
