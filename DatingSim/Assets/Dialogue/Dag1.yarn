@@ -16,7 +16,7 @@ Cassie: What’s your name handsome?
     <<SetMood "Cassie neutral">>
     <<ShowNameInput SceneManager>>
     <<wait 3>>>
-Cassie: Ok {$playerName}, you must be heading to the reception, right? 
+Cassie: Okay {$playerName}, you must be heading to the reception, right? 
 Cassie: It’s the first door on the right when you enter the school. 
     <<SetMood "Cassie happy">>
 Cassie: I'm late so gotta run! Bye-bye!! 
