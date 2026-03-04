@@ -63,6 +63,7 @@ title: D1_E_Positive1
 ---
 {$playerName}: Actually, it sounds kind of cool.
 ???: ...Really?
+<<SetMood Nancy angry>>
 She looks surprised, then slightly pleased.
 ???: Most people laugh when I mention it.
 {$playerName}: Why would I? It sounds mysterious.
