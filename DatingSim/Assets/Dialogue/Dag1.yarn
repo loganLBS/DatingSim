@@ -1,7 +1,7 @@
 ﻿title: D1_MC_Start1
 ---
 <<set $playerName = "Player">>
-<<setBackground Corridor1>>
+<<bg school>>
 {$playerName}: *It's my first day in my new school and I heard there's a lot of pretty girls here!* 
  {$playerName}: *What I really want from this year is to get a girlfriend. but first i should...*
  ...Someone bumps into you.
@@ -28,6 +28,7 @@ Cassie: I'm late so gotta run! Bye-bye!!
 
 title: D1_N_Reception1
 ---
+ <<bg corridor>>
     <<wait 2>>
 A tall girl with glasses waits next to the desk. You make eye contact.
         <<SetMood "Nancy unknown">>
@@ -48,7 +49,7 @@ She turns without waiting to see if you agree.
 
 title: D1_E_Cafeteria1
 ---
-    <<wait 2>>
+     <<wait 2>>
 [At reception] You say bye to Nancy as you make your way to the cafeteria for lunch.
 [hallway] You bump into something
 (Takiko)
@@ -58,7 +59,9 @@ title: D1_E_Cafeteria1
 ???: Get out of my way, germfest.
 {$playerName}: *what’s her problem.*
     <<wait 1>>
-[Cafeteria] Searching for a table to sit at you find a girl sitting all alone.
+    <<bg cafeteria>>
+    <<wait 1>>
+Searching for a table to sit at you find a girl sitting all alone.
 (emiko)
 {$playerName}: Excuse me, can I sit here?
 She looks up from her papers
@@ -141,13 +144,16 @@ She turns slightly, as if ready to leave.
 ???: My class is about to start.
 She starts walking, posture perfectly straight.
 {$playerName}: *Great. First day, and I already offended someone.*
+<<wait 1>>
     <<jump D1_B_Classroom1>>
 
 ===
 
 title: D1_B_Classroom1
 ---
-[Classroom] Introducing yourself to the class you see a few familiar faces. Cassie and the rude girl from before is among them.
+ <<bg classroom>>
+ <<wait 2>>
+Introducing yourself to the class you see a few familiar faces. Cassie and the rude girl from before is among them.
 Teacher: {$playerName} please go and have a seat next to Sasha.
 You walk over and sit down next to a sporty looking girl.
 {$playerName}: Hey, im {$playerName} looks like we are gonna be desk-neighbors.
