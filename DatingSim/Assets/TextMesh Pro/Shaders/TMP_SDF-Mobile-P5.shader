@@ -237,7 +237,7 @@ SubShader {
 			#endif
 
 			//#if UNITY_UI_ALPHACLIP
-			//clip(c.a - 0.001);
+			clip(c.a - 0.001);	
 			//#endif
 
 			return c;

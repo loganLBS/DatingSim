@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.InputSystem; // Required for Input System
+using UnityEngine.InputSystem;
+using static System.Net.Mime.MediaTypeNames;
 
 public class Persona5MenuController : MonoBehaviour
 {
@@ -10,9 +11,10 @@ public class Persona5MenuController : MonoBehaviour
     public RectTransform[] menuItems;
 
     [Header("Input")]
-    public MenuControls inputActions; // Reference to the generated class
+    public MenuControls inputActions;
 
     private int currentIndex = 0;
+    private Vector3 cursorOffset; // Stores the initial offset from the first menu item
 
     private void Awake()
     {
@@ -22,7 +24,6 @@ public class Persona5MenuController : MonoBehaviour
     private void OnEnable()
     {
         inputActions.Menu.Enable();
-        // Subscribe to the Submit action
         inputActions.Menu.Submit.performed += OnSubmit;
     }
 
@@ -34,37 +35,43 @@ public class Persona5MenuController : MonoBehaviour
 
     private void Start()
     {
+        if (menuItems.Length > 0)
+        {
+            cursorOffset = cursorWhite.position - menuItems[0].position;
+        }
         UpdateCursorPosition();
     }
 
     private void Update()
     {
-        // Read the Navigate value (Vector2)
-        Vector2 navigate = inputActions.Menu.Navigate.ReadValue<Vector2>();
+        // Check if the Navigate action was pressed this frame
+        if (inputActions.Menu.Navigate.WasPressedThisFrame())
+        {
+            Vector2 navigateValue = inputActions.Menu.Navigate.ReadValue<Vector2>();
 
-        if (navigate.y > 0.5f) // Up
-        {
-            currentIndex--;
-            if (currentIndex < 0) currentIndex = menuItems.Length - 1;
-            UpdateCursorPosition();
-        }
-        else if (navigate.y < -0.5f) // Down
-        {
-            currentIndex++;
-            if (currentIndex >= menuItems.Length) currentIndex = 0;
-            UpdateCursorPosition();
+            if (navigateValue.y > 0.5f) // Up
+            {
+                currentIndex--;
+                if (currentIndex < 0) currentIndex = menuItems.Length - 1;
+                UpdateCursorPosition();
+            }
+            else if (navigateValue.y < -0.5f) // Down
+            {
+                currentIndex++;
+                if (currentIndex >= menuItems.Length) currentIndex = 0;
+                UpdateCursorPosition();
+            }
         }
     }
 
     private void OnSubmit(InputAction.CallbackContext context)
     {
-        // This is called when the Submit action is performed
         SelectCurrentItem();
     }
 
     void UpdateCursorPosition()
     {
-        Vector3 newPos = menuItems[currentIndex].position;
+        Vector3 newPos = menuItems[currentIndex].position + cursorOffset;
         cursorWhite.position = newPos;
         cursorBlack.position = newPos;
     }
@@ -75,17 +82,12 @@ public class Persona5MenuController : MonoBehaviour
         {
             case 0:
                 Debug.Log("Start Game");
-                // Load your game scene
                 break;
             case 1:
                 Debug.Log("Load Game");
                 break;
             case 2:
-                Debug.Log("Options");
-                break;
-            case 3:
                 Debug.Log("Quit");
-                Application.Quit();
                 break;
         }
     }
