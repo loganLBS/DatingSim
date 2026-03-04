@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using static System.Net.Mime.MediaTypeNames;
+using System.Security.Cryptography.X509Certificates;
+using System.Diagnostics;
 
 public class Persona5MenuController : MonoBehaviour
 {
@@ -81,13 +83,17 @@ public class Persona5MenuController : MonoBehaviour
         switch (currentIndex)
         {
             case 0:
-                Debug.Log("Start Game");
+                UnityEngine.Debug.Log("Start Game");
+                SceneLoader.Instance.LoadScene("Ville");
                 break;
+
             case 1:
-                Debug.Log("Load Game");
+                UnityEngine.Debug.Log("Load Game");
                 break;
+
             case 2:
-                Debug.Log("Quit");
+                UnityEngine.Debug.Log("Quit");
+                UnityEngine.Application.Quit();
                 break;
         }
     }

@@ -7,7 +7,7 @@ public static class SaveFunction
 {
     private static string savePath => Application.persistentDataPath + "/save.json";
 
-    [YarnCommand("Save")]
+//    [YarnCommand("Save")]
     public static void Save(SaveInfo Dag1)
     {
         SaveInfo data = new SaveInfo
