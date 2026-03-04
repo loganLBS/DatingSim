@@ -11,6 +11,7 @@ public class CharacterMoodController : MonoBehaviour
         public Sprite happy;
         public Sprite neutral;
         public Sprite angry;
+        public Sprite unknown;
     }
 
     [System.Serializable]
@@ -55,6 +56,10 @@ public class CharacterMoodController : MonoBehaviour
                         break;
                     case "angry":
                         c.image.sprite = c.moods.angry;
+                        c.image.gameObject.SetActive(true);
+                        break;
+                    case "unknown":
+                        c.image.sprite = c.moods.unknown;
                         c.image.gameObject.SetActive(true);
                         break;
                     default:
