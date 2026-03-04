@@ -8,8 +8,11 @@
  ???: Sorry, are you hurt?
 {$playerName}: No i-i'm fine
 ???: That’s good! You must be the new guy? 
+    <<SetMood "Cassie neutral">>
 Cassie: I'm Cassie!
+    <<SetMood "Cassie happy">>
 Cassie: What’s your name handsome?
+    <<SetMood "Cassie neutral">>
     <<ShowNameInput SceneManager>>
     <<wait 3>>>
 Cassie: Ok {$playerName}, you must be heading to the reception, right? 
@@ -63,7 +66,7 @@ title: D1_E_Positive1
 ---
 {$playerName}: Actually, it sounds kind of cool.
 ???: ...Really?
-<<SetMood Nancy angry>>
+    <<SetMood "Nancy angry">>
 She looks surprised, then slightly pleased.
 ???: Most people laugh when I mention it.
 {$playerName}: Why would I? It sounds mysterious.
