@@ -1,18 +1,26 @@
 ﻿title: D2_MC_Start1
 ---
 [Classroom] A new day begins and in your classroom you find Cassie and the rude girl arguing.
-???: Cassie button up your shirt, Moron! *hmmp*
+    <<SetMood "Takiko unknown">>
+???: Cassie button up your shirt, Moron! *hmmp*  
+      <<SetMood "Takiko hide">>
+        <<SetMood "Cassie neutral">>
 Cassie: You know I’m trying to, Takiko, but it won’t button.
-    <<SetMood "Takiko angry">>
+      <<SetMood "Cassie hide">>
+        <<SetMood "Takiko angry">>
 Takiko: Can’t you buy decent clothes for once? 
 Takiko: All you got is boobs for brains!
+      <<SetMood "Takiko hide">>
+        <<SetMood "Cassie happy">>
 Cassie: Thank you! *smiles brightly*
+      <<SetMood "Cassie hide">>
+        <<SetMood "Takiko angry">>
 Takiko: That was an insult pea brain.
-    <<SetMood "Takiko hide">>
-          <<SetMood "Cassie angry">>
 Cassie looks hurt by Takiko’s comment, as they keep bickering back and forth, they see you standing to the side.
 Takiko: Hey {$playerName}! Can you tell this pumpkin farmer to cover up!
 You're suprised by the sudden attention.
+      <<SetMood "Takiko hide">>
+        <<SetMood "Cassie neutral">>
 Cassie: *hmmp* Can you stop being wierd, {$playerName} tell her to back off!
 Both girls turn to you waiting for your response.
     -> {$playerName}: (+ for Cassie) Takiko, relax. 
@@ -27,9 +35,14 @@ title: D2_C_Positive1
 ---
 {$playerName}: Takiko, relax. It’s not that serious. She’s fine.
 Cassie beams at you.
+    <<SetMood "Takiko hide">>
+        <<SetMood "Cassie happy">>
 Cassie: See? Thank you!
+    <<SetMood "Cassie hide">>
+        <<SetMood "Takiko angry">>
 Takiko: *Tch.* Of course you’d side with her. 
 Her eyebrows burrow as she storms to her seat.
+    <<SetMood "Takiko hide">>
 The lessons starts as you take your seat beside Sasha. 
     <<jump D2_B_Corridor1>>
 ===
@@ -57,4 +70,9 @@ Takiko: Dont you dare think i like you now *hmmp*
 Takiko walks back to her seat blushing, leaving you speechless.
 The lessons starts as you take your seat beside Sasha. 
     <<jump D2_B_Corridor1>>
+===
+
+title: D2_B_Corridor1
+---
+penis
 ===

@@ -348,8 +348,8 @@ MonoBehaviour:
     image: {fileID: 206563810}
     moods:
       happy: {fileID: 4549238367668757828, guid: a79a01012a08e59479388e9284be2458, type: 3}
-      neutral: {fileID: -1208600528885069109, guid: a79a01012a08e59479388e9284be2458, type: 3}
-      angry: {fileID: 5305548593663507163, guid: a79a01012a08e59479388e9284be2458, type: 3}
+      neutral: {fileID: 5305548593663507163, guid: a79a01012a08e59479388e9284be2458, type: 3}
+      angry: {fileID: -1208600528885069109, guid: a79a01012a08e59479388e9284be2458, type: 3}
       unknown: {fileID: -7711977610215628366, guid: d139bda5d0cbe4849a8934a3ba6c9f79, type: 3}
   - name: Bebe
     image: {fileID: 1815242634}
@@ -1804,7 +1804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: startNode
-      value: Dag2
+      value: D2_MC_Start1
       objectReference: {fileID: 0}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: yarnProject
