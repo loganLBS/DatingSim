@@ -41,6 +41,7 @@ public class DTSMiddleman : MonoBehaviour
     {
         Day++;
         Debug.Log("day increased to " + Day);
+        SceneLoader2.Instance.LoadNextScene();
     }
 
     public void ctUP()
