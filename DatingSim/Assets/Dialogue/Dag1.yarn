@@ -230,6 +230,7 @@ Bebe: Don’t overthink it, Trouble. Life’s more fun when you roll with the ch
     <<SetMood "Bebe happy">>
 She nudges you lightly with her elbow, playful and teasing. Before they walk away together chatting to themselves
     <<SetMood "Bebe hide">>
+    <<NextDay>>
 
 ===
 

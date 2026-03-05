@@ -1,15 +1,17 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
-using System.ComponentModel;
-using System.Diagnostics;
+using Yarn.Unity; // Add this namespace
 
 public class SceneLoader2 : MonoBehaviour
 {
     public static SceneLoader2 Instance;
 
-    [SerializeField] private CanvasGroup fadeCanvas; // Optional fade overlay
+    [SerializeField] private CanvasGroup fadeCanvas;
     [SerializeField] private float fadeDuration = 0.5f;
+
+    // Reference to your Yarn Dialogue Runner
+    [SerializeField] private DialogueRunner dialogueRunner;
 
     private void Awake()
     {
@@ -18,14 +20,28 @@ public class SceneLoader2 : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
+        //else
+       // {
+            //Destroy(gameObject);
+       // }
+    }
+
+    private void Start()
+    {
+        // Register the command with Yarn Spinner
+        if (dialogueRunner != null)
+        {
+            // This makes <<LoadNextScene>> call the LoadNextScene() method
+            dialogueRunner.AddCommandHandler("NextDay", NextDay);
+            UnityEngine.Debug.Log("Yarn command 'NextDay' registered successfully");
+        }
         else
         {
-            Destroy(gameObject);
+            UnityEngine.Debug.LogError("DialogueRunner reference not set in SceneLoader!");
         }
     }
 
-    // --- Load the next scene in build order ---
-    public void LoadNextScene()
+    public void NextDay()
     {
         int nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
         if (nextIndex < SceneManager.sceneCountInBuildSettings)
@@ -38,7 +54,6 @@ public class SceneLoader2 : MonoBehaviour
         }
     }
 
-    // --- Coroutine that handles the fade and scene loading ---
     private IEnumerator LoadSceneRoutine(int buildIndex)
     {
         // Fade out
@@ -47,13 +62,12 @@ public class SceneLoader2 : MonoBehaviour
             yield return Fade(1);
         }
 
-        UnityEngine.AsyncOperation operation = SceneManager.LoadSceneAsync(buildIndex);
+        AsyncOperation operation = SceneManager.LoadSceneAsync(buildIndex);
         operation.allowSceneActivation = false;
 
         while (operation.progress < 0.9f)
             yield return null;
 
-        // Optional small delay
         yield return new WaitForSeconds(0.2f);
 
         operation.allowSceneActivation = true;
@@ -88,5 +102,14 @@ public class SceneLoader2 : MonoBehaviour
 
         if (target == 0f)
             fadeCanvas.blocksRaycasts = false;
+    }
+
+    // Optional: Clean up when destroyed
+     private void OnDestroy()
+    {
+        if (dialogueRunner != null)
+        {
+           // dialogueRunner.RemoveCommandHandler("NextDay");
+        }
     }
 }
