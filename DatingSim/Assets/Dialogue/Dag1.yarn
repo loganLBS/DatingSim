@@ -236,7 +236,8 @@ She nudges you lightly with her elbow, playful and teasing. Before they walk awa
 
 title: D1_B_Positive1
 ---
-Mc: I hope she only said the good things.
+<<SetMood "Bebe neutral">>
+{$playerName}: I hope she only said the good things.
 Bebe steps closer, her protective glare softening into a teasing smile.
     <<SetMood "Bebe happy">>
 Bebe: Maybe, maybe not.
@@ -248,7 +249,7 @@ Cassie giggles, clearly used to Bebe’s antics
 Babe: Don’t let her smile fool you… I’m still in charge here.
 She winks at you, brushing a strand of hair from her face.
 Bebe: But... maybe I wouldn’t mind sharing a little… attention.
-Mc: That... doesn’t sound fair.
+{$playerName}: That... doesn’t sound fair.
 Bebe laughs softly
 Bebe: Life isn’t always fair… but I can make it fun.
     <<SetMood "Bebe hide">>
