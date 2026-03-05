@@ -1,0 +1,60 @@
+﻿title: D2_MC_Start1
+---
+[Classroom] A new day begins and in your classroom you find Cassie and the rude girl arguing.
+???: Cassie button up your shirt, Moron! *hmmp*
+Cassie: You know I’m trying to, Takiko, but it won’t button.
+    <<SetMood "Takiko angry">>
+Takiko: Can’t you buy decent clothes for once? 
+Takiko: All you got is boobs for brains!
+Cassie: Thank you! *smiles brightly*
+Takiko: That was an insult pea brain.
+    <<SetMood "Takiko hide">>
+          <<SetMood "Cassie angry">>
+Cassie looks hurt by Takiko’s comment, as they keep bickering back and forth, they see you standing to the side.
+Takiko: Hey {$playerName}! Can you tell this pumpkin farmer to cover up!
+You're suprised by the sudden attention.
+Cassie: *hmmp* Can you stop being wierd, {$playerName} tell her to back off!
+Both girls turn to you waiting for your response.
+    -> {$playerName}: (+ for Cassie) Takiko, relax. 
+        <<jump D2_C_Positive1>>
+    -> {$playerName}: (Neutral) Maybe we can all survive homeroom without declaring war? 
+        <<jump D2_MC_Neutral1>>
+    -> {$playerName}: (+ for Takiko) I mean... maybe buttoning it up would help.
+        <<jump D2_T_Positive1>>
+===
+
+title: D2_C_Positive1
+---
+{$playerName}: Takiko, relax. It’s not that serious. She’s fine.
+Cassie beams at you.
+Cassie: See? Thank you!
+Takiko: *Tch.* Of course you’d side with her. 
+Her eyebrows burrow as she storms to her seat.
+The lessons starts as you take your seat beside Sasha. 
+    <<jump D2_B_Corridor1>>
+===
+
+title: D2_MC_Neutral1
+---
+{$playerName}: Maybe we can all survive homeroom without declaring war?
+Cassie lets out a small laugh.
+Cassie: Fine, truce. 
+Takiko crosses her arms but doesn’t argue further.
+Takiko: Temporary truce.
+The lessons starts as you take your seat beside Sasha. 
+    <<jump D2_B_Corridor1>>
+===
+
+title: D2_T_Positive1
+---
+{$playerName}: I mean… maybe buttoning it up would help.
+Cassie’s smile falters.
+Cassie: Oh...
+Takiko grins proudly.
+Takiko: See? Someone has common sense.
+A pout crosses Cassie's lips as she takes her seat.
+Takiko: Dont you dare think i like you now *hmmp*
+Takiko walks back to her seat blushing, leaving you speechless.
+The lessons starts as you take your seat beside Sasha. 
+    <<jump D2_B_Corridor1>>
+===

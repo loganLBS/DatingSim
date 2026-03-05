@@ -1,4 +1,4 @@
-﻿title: D1_MC_Start1
+title: D1_MC_Start1
 ---
 <<set $playerName = "Player">>
 <<bg school>>
@@ -52,18 +52,19 @@ title: D1_E_Cafeteria1
      <<wait 2>>
 [At reception] You say bye to Nancy as you make your way to the cafeteria for lunch.
 [hallway] You bump into something
-(Takiko)
+      <<SetMood "Takiko unknown">>
 ???: Hey! watch where you're going, idiot!
-{$playerName}: Sorry didnt see you..
+{$playerName}: Sorry I didn't see you..
 ???: You have eyes for a reason morron. Hmph 
 ???: Get out of my way, germfest.
 {$playerName}: *what’s her problem.*
+      <<SetMood "Takiko hide">>
     <<wait 1>>
     <<bg cafeteria>>
     <<wait 1>>
 Searching for a table to sit at you find a girl sitting all alone.
-(emiko)
 {$playerName}: Excuse me, can I sit here?
+        <<SetMood "Emiko unknown">>
 She looks up from her papers
 ???: Sure.
 {$playerName}: So what are you reading?
@@ -81,7 +82,6 @@ title: D1_E_Positive1
 ---
 {$playerName}: Actually, it sounds kind of cool.
 ???: ...Really?
-    <<SetMood "Nancy angry">>
 She looks surprised, then slightly pleased.
 ???: Most people laugh when I mention it.
 {$playerName}: Why would I? It sounds mysterious.
@@ -94,6 +94,7 @@ Her shoulders relax slightly.
 A small pause.
 ???: Probably.
 {$playerName}: *Probably?*
+        <<SetMood "Emiko neutral">>
 Emiko: I’m Emiko, by the way. 
 She gives a small, polite nod.
 A bell can be heard
@@ -101,31 +102,34 @@ Emiko: If you wanna catch a break and talk about some occult things you can usua
 Emiko is gesturing for your name
 {$playerName}: {$playerName}
 Emiko: {$playerName}, catch you later. 
+     <<SetMood "Emiko hide">>
     <<jump D1_B_Classroom1>>
 ===
 
 title: D1_E_Neutral1
 ---
 {$playerName}: Not really my thing, but that’s cool. What’s your name?
+    <<SetMood "Emiko neutral">>
 ???: No I get that, my name's Emiko, you?
- {$playerName}: I’m {$playerName}.
+{$playerName}: I’m {$playerName}.
 Emiko: Nice to meet you, {$playerName}.
 She gives a small nod, dark bangs shifting slightly.
-{$playerName} (thought): She looks intimidating… but she’s actually pretty chill.
+{$playerName}: *She looks intimidating… but she’s actually pretty chill.*
 Emiko: So, first day nerves yet? Or are you one of those people who just walks into new places like you own them?
-{$playerName}: I think I’m somewhere in between. I’m nervous… just trying not to show it.
+{$playerName}: I think I’m somewhere inbetween. I’m nervous... just trying not to show it.
 Emiko: Honest answer. Rare.
 She tilts her head slightly, studying you.
 Emiko: Most people either brag or lie.
 {$playerName}: Which one do you do?
 Emiko: Neither. I just observe.
 There’s a brief pause as a bell can be heard.
-{$playerName} (thought): She talks like she’s analyzing a science experiment.
+{$playerName} (thought): She talks as though she’s analyzing a science experiment.
 Emiko: You don’t seem boring, though. That’s a good start.
 {$playerName}: I’ll take that as a compliment.
 Emiko: You should. I don’t give those often.
 She gestures down the corridor.
 Emiko: Class is about to start, we should get going.
+    <<SetMood "Emiko hide">>
     <<jump D1_B_Classroom1>>
 ===
 
@@ -144,6 +148,7 @@ She turns slightly, as if ready to leave.
 ???: My class is about to start.
 She starts walking, posture perfectly straight.
 {$playerName}: *Great. First day, and I already offended someone.*
+    <<SetMood "Emiko hide">>
 <<wait 1>>
     <<jump D1_B_Classroom1>>
 
@@ -154,8 +159,10 @@ title: D1_B_Classroom1
  <<bg classroom>>
  <<wait 2>>
 Introducing yourself to the class you see a few familiar faces. Cassie and the rude girl from before is among them.
+    <<SetMood "Teacher Neutral">>
 Teacher: {$playerName} please go and have a seat next to Sasha.
 You walk over and sit down next to a sporty looking girl.
+    <<SetMood "Teacher hide">>
 {$playerName}: Hey, im {$playerName} looks like we are gonna be desk-neighbors.
 Sasha laughs
 Sasha: That’s right, I'm Sasha! And judging by your face... you don’t look like you’ve survived gym class yet.
@@ -171,7 +178,8 @@ The rude girl from before rolls her eyes dramatically. As class begins.
 
 [Classroom] The bell rings. Chairs scrape. Students start packing up. 
 Just as you finish putting your notebook away, the classroom door swings open. 
-A girl practically bounces inside. A bright smile, confident posture and sporatic energy.
+A girl runs so fast she practically bounces inside the class.
+A bright smile, confident posture and sporatic energy.
         <<SetMood "Bebe unknown">>
 ???: Cassieee!
 She walks straight up to Cassie’s desk, ploughing down everyone and everything in her way.
