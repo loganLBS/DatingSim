@@ -11,6 +11,7 @@ public class Persona5MenuController : MonoBehaviour
     public RectTransform cursorWhite;
     public RectTransform cursorBlack;
     public RectTransform[] menuItems;
+    public SettingsMenu settingsMenu;   // Drag the SettingsPanel here
 
     [Header("Input")]
     public MenuControls inputActions;
@@ -88,7 +89,9 @@ public class Persona5MenuController : MonoBehaviour
                 break;
 
             case 1:
-                UnityEngine.Debug.Log("Load Game");
+                UnityEngine.Debug.Log("Settings");
+                if (settingsMenu == null) UnityEngine.Debug.LogError("settingsMenu is null!");
+                else settingsMenu.OpenSettings();
                 break;
 
             case 2:

@@ -124,17 +124,6 @@ public partial class @MenuControls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""5e21e527-00cc-443d-a01b-c7778461fd14"",
-                    ""path"": ""<Mouse>/press"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Submit"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
                     ""name"": ""2D Vector"",
                     ""id"": ""8ed3bce2-55fc-4be3-aefa-835f3ca516a1"",
                     ""path"": ""2DVector"",
