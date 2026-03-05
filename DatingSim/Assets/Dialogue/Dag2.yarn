@@ -141,9 +141,36 @@ Nancy: Yeah? *looks at you like you’re stupid*
 You take your seat next to her. Opening your books as you begin studying.
 15 minutes passes.
 {$playerName}: *Damn this question is hard.*
-    ->Looking it up in the book. You feel Nancy giving you a quick, pouty glare.
+    -> Look it up in the book. 
+        You feel Nancy giving you a quick, pouty glare.
         Nancy: You know it’s better to ask for help before looking it up.
         {$playerName}: I didn’t wanna bother you. You looked concentrated.
         Nancy: *mumbels* I wouldn't mind helping. *she looks down at her book again*
+    -> Just give up. 
+        After staring at your books for a few seconds you close them and push them to the side as you take up your phone to play a game.
+        Nancy: You know this is a study period. Not game period. *she looks at you disapproving*
+        Mc: Sorry… *glare awkwardly*
+        Nancy: If you’re just gonna play you can leave. *As she points with her eyes to the door*
+        You mumble something in confusion as you quickly pack your bags to get out of there.
+        Leaving you see Nancy giving you a nasty glare from above her glasses before going back to her book.
+<<wait 2>>
+[Cafeteria] After getting your food from the lunch lady, you look out to see Cassie sitting alone at a table upset about something. 
+You begin walking towards her when you hear a girl shout.
+Sasha: {$playerName}! Come and sit here! *she points to the seat next to her as she sits with her friends*
+    ->You turn away from the loud table and walk toward Cassie.
+        She looks up as you approach.
+        {$playerName}: Mind if I sit?
+        Cassie: Oh! Yeah, of course. I mean— it’s not assigned seating or anything.
+        You sit.
+        There’s a small pause.
+        {$playerName}: You seem quieter than usual.
+        She shrugs, poking at her food.
+        Cassie: Just thinking, I guess.
+        Her smile this time is softer. More genuine.
+        Across the room, Sasha notices you didn’t come.
+        She leans back in her chair, watching briefly, unreadable.
+
+
+
 ===
 
