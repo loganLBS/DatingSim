@@ -130,17 +130,20 @@ Emiko: No, I prefer to read my book.
 title: D2_N_Library1
 ---
 You walk to Nancy, she sits in a cozy corner, with warm lights, a bench sofa with a table connected.
-Mc: Hi Nancy. Do you mind if I sit here?
+{$playerName}: Hi Nancy. Do you mind if I sit here?
 Nancy: If you want. 
 She looks at you suspiciously
-Mc: What are you studying for?
+{$playerName}: What are you studying for?
 Nancy: Biologi 3.
-Mc: Isn't that for third years?
+{$playerName}: Isn't that for third years?
 Nancy: Yeah? *looks at you like you’re stupid*
-Mc(mind): Ah she is smart smart.
+{$playerName}: *Ah she is smart smart.*
 You take your seat next to her. Opening your books as you begin studying.
 15 minutes passes.
-Mc(mind): Damn this question is hard.
-
+{$playerName}: *Damn this question is hard.*
+    ->Looking it up in the book. You feel Nancy giving you a quick, pouty glare.
+        Nancy: You know it’s better to ask for help before looking it up.
+        {$playerName}: I didn’t wanna bother you. You looked concentrated.
+        Nancy: *mumbels* I wouldn't mind helping. *she looks down at her book again*
 ===
 
