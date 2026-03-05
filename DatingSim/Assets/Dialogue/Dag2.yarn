@@ -39,8 +39,9 @@ Cassie beams at you.
         <<SetMood "Cassie happy">>
 Cassie: See? Thank you!
     <<SetMood "Cassie hide">>
-        <<SetMood "Takiko angry">>
+        <<SetMood "Takiko neutral">>
 Takiko: *Tch.* Of course you’d side with her. 
+    <<SetMood "Takiko angry">>
 Her eyebrows burrow as she storms to her seat.
     <<SetMood "Takiko hide">>
 The lessons starts as you take your seat beside Sasha. 
@@ -50,10 +51,15 @@ The lessons starts as you take your seat beside Sasha.
 title: D2_MC_Neutral1
 ---
 {$playerName}: Maybe we can all survive homeroom without declaring war?
+     <<SetMood "Cassie neutral">>
 Cassie lets out a small laugh.
 Cassie: Fine, truce. 
+     <<SetMood "Cassie hide">>
+         <<SetMood "Takiko angry">>
 Takiko crosses her arms but doesn’t argue further.
+    <<SetMood "Takiko neutral">>
 Takiko: Temporary truce.
+    <<SetMood "Takiko hide">>
 The lessons starts as you take your seat beside Sasha. 
     <<jump D2_B_Corridor1>>
 ===
@@ -74,5 +80,67 @@ The lessons starts as you take your seat beside Sasha.
 
 title: D2_B_Corridor1
 ---
-penis
+<<if visited("D2_C_Positive1") or visited("D2_MC_Neutral1")>>
+{$playerName}: I told Takiko to leave her alone. 
+Bebe: Good, Takiko always had a brick up her ass. Where is your next lesson?
+{$playerName}: In the library.
+Bebe walks you to your study period while telling stories about her's and Cassie's friendship.
+<<else>>
+{$playerName}: No, I told Cassie that her clothes are not appropriate for school. 
+Bebe: Who are you to tell a girl what she should wear, you moron?!
+Bebe storms away. You walk to the library confused. 
+<<endif>>
+
+As you enter the library you see Emiko sitting in a dark corner.
+You also see Nancy, she's sitting in a cozy corner on the other side of the room.
+Who do you join?
+    -> Emiko
+        <<jump D2_E_Library1>>
+    -> Nancy
+        <<jump D2_N_Library1>>
 ===
+
+title: D2_E_Library1
+---
+You walk to the corner where Emiko sits. 
+{$playerName}: What are you doing here?
+Emiko: Reading, can't you see that?
+{$playerName}: I meant, why are you in a corner, did you get punished?
+Emiko: No, it's my favorite place, it's dark, warm, and no one bothers me. 
+{$playerName}: Should I leave?
+Emiko: No, you can stay. 
+{$playerName}: Do you want to study together?
+Emiko: No, I prefer to read my book. 
+    ->(+ for Emiko) The Bell Jar. I never read that book but I heard it’s good. Can I read with you? 
+        {$playerName}: The Bell Jar. I never read that book but I heard it’s good. Can I read with you?            
+        You can see a little smile creep on her face. 
+        Emiko : Of course, I didn’t think we would vibe like that. *smiles*
+        She scoots to the side, you sit beside her as Emiko gives you an earbud.
+    ->(- for Emiko) Don’t we have a study period right now? You should be studying. 
+        {$playerName}: Don’t we have a study period right now? You should be studying.
+        Emiko: Why would I, it's not like I care?!
+        She looks visibly upset. 
+        {$playerName}: Shouldn't you care about your future?
+        Emiko: You don't understand, I wont have one. 
+        Emiko storms off upset. 
+        {$playerName} * What did she mean by not having one*
+
+===
+
+title: D2_N_Library1
+---
+You walk to Nancy, she sits in a cozy corner, with warm lights, a bench sofa with a table connected.
+Mc: Hi Nancy. Do you mind if I sit here?
+Nancy: If you want. 
+She looks at you suspiciously
+Mc: What are you studying for?
+Nancy: Biologi 3.
+Mc: Isn't that for third years?
+Nancy: Yeah? *looks at you like you’re stupid*
+Mc(mind): Ah she is smart smart.
+You take your seat next to her. Opening your books as you begin studying.
+15 minutes passes.
+Mc(mind): Damn this question is hard.
+
+===
+
