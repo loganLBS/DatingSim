@@ -1,6 +1,9 @@
 using UnityEngine;
 using Yarn.Unity;
 using UnityEngine.UI;
+using System.Collections;
+using System.ComponentModel;
+using System.Diagnostics;
 
 public class DTSMiddleman : MonoBehaviour
 {
@@ -36,12 +39,12 @@ public class DTSMiddleman : MonoBehaviour
         SaveFunction.Save(data);
     }
 
-    [YarnCommand("NextDay")]
+    //[YarnCommand("NextDay")]
     public void NextDay()
     {
         Day++;
-        Debug.Log("day increased to " + Day);
-        SceneLoader2.Instance.LoadNextScene();
+        UnityEngine.Debug.Log("day increased to " + Day);
+        
     }
 
     public void ctUP()
