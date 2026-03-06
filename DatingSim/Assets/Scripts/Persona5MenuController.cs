@@ -116,6 +116,10 @@ public class Persona5MenuController : MonoBehaviour
                 break;
 
             case 2:
+                UnityEngine.Debug.Log("Load");
+                SaveFunction.Load()
+                break;
+            case 3:
                 UnityEngine.Debug.Log("Quit");
                 UnityEngine.Application.Quit();
                 break;
