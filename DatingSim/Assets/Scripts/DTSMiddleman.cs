@@ -8,6 +8,8 @@ using System.Diagnostics;
 public class DTSMiddleman : MonoBehaviour
 {
     public static DTSMiddleman Instance;
+    // Reference to your Yarn Dialogue Runner
+    [SerializeField] private DialogueRunner dialogueRunner;
     public Slider trustSlider;
 
     public int Day = 0;
@@ -30,6 +32,32 @@ public class DTSMiddleman : MonoBehaviour
         // {
         //Destroy(gameObject);
         // }
+    }
+
+    private void Start()
+    {
+        if (dialogueRunner != null)
+        {
+            // This makes <<LoadNextScene>> call the LoadNextScene() method
+            dialogueRunner.AddCommandHandler("Cassie Trust Up", ctUP);
+            dialogueRunner.AddCommandHandler("Cassie Trust Down", ctDW);
+            dialogueRunner.AddCommandHandler("Bebe Trust Up", btUP);
+            dialogueRunner.AddCommandHandler("Nancy Trust Up", ntUP);
+            dialogueRunner.AddCommandHandler("Emiko Trust Up", etUP);
+            dialogueRunner.AddCommandHandler("Takiko Trust Up", ttUP);
+            dialogueRunner.AddCommandHandler("Sasha Trust Up", stUP);
+            dialogueRunner.AddCommandHandler("Bebe Trust Down", btDW);
+            dialogueRunner.AddCommandHandler("Nancy Trust Down", ntDW);
+            dialogueRunner.AddCommandHandler("Emiko Trust Down", etDW);
+            dialogueRunner.AddCommandHandler("Takiko Trust Down", ttDW);
+            dialogueRunner.AddCommandHandler("Sasha Trust Down", stDW);
+
+            UnityEngine.Debug.Log("Yarn command 'Character Trust Commands' registered successfully");
+        }
+        else
+        {
+            UnityEngine.Debug.LogError("DialogueRunner reference not set in SceneLoader!");
+        }
     }
     public void UpdateUI()
     {
@@ -66,6 +94,8 @@ public class DTSMiddleman : MonoBehaviour
         cassieTrust = cassieTrust + 12.5f;
         trustSlider.value = cassieTrust;
     }
+
+
     public void ctDW()
     {
         cassieTrust = cassieTrust - 12.5f;
