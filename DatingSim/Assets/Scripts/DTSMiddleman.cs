@@ -21,36 +21,25 @@ public class DTSMiddleman : MonoBehaviour
     public float sashaTrust = 0;
     public float trust = 0;
 
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        //else
-        // {
-        //Destroy(gameObject);
-        // }
-    }
+   
 
     private void Start()
     {
         if (dialogueRunner != null)
         {
             // This makes <<LoadNextScene>> call the LoadNextScene() method
-            dialogueRunner.AddCommandHandler("Cassie Trust Up", ctUP);
-            dialogueRunner.AddCommandHandler("Cassie Trust Down", ctDW);
-            dialogueRunner.AddCommandHandler("Bebe Trust Up", btUP);
-            dialogueRunner.AddCommandHandler("Nancy Trust Up", ntUP);
-            dialogueRunner.AddCommandHandler("Emiko Trust Up", etUP);
-            dialogueRunner.AddCommandHandler("Takiko Trust Up", ttUP);
-            dialogueRunner.AddCommandHandler("Sasha Trust Up", stUP);
-            dialogueRunner.AddCommandHandler("Bebe Trust Down", btDW);
-            dialogueRunner.AddCommandHandler("Nancy Trust Down", ntDW);
-            dialogueRunner.AddCommandHandler("Emiko Trust Down", etDW);
-            dialogueRunner.AddCommandHandler("Takiko Trust Down", ttDW);
-            dialogueRunner.AddCommandHandler("Sasha Trust Down", stDW);
+            dialogueRunner.AddCommandHandler("CassieTrustUp", ctUP);
+            dialogueRunner.AddCommandHandler("CassieTrustDown", ctDW);
+            dialogueRunner.AddCommandHandler("BebeTrustUp", btUP);
+            dialogueRunner.AddCommandHandler("NancyTrustUp", ntUP);
+            dialogueRunner.AddCommandHandler("EmikoTrustUp", etUP);
+            dialogueRunner.AddCommandHandler("TakikoTrustUp", ttUP);
+            dialogueRunner.AddCommandHandler("SashaTrustUp", stUP);
+            dialogueRunner.AddCommandHandler("BebeTrustDown", btDW);
+            dialogueRunner.AddCommandHandler("NancyTrustDown", ntDW);
+            dialogueRunner.AddCommandHandler("EmikoTrustDown", etDW);
+            dialogueRunner.AddCommandHandler("TakikoTrustDown", ttDW);
+            dialogueRunner.AddCommandHandler("SashaTrustDown", stDW);
 
             UnityEngine.Debug.Log("Yarn command 'Character Trust Commands' registered successfully");
         }
