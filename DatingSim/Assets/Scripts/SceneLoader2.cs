@@ -6,6 +6,7 @@ using Yarn.Unity; // Add this namespace
 public class SceneLoader2 : MonoBehaviour
 {
     public static SceneLoader2 Instance;
+    public DTSMiddleman DTS;
 
     [SerializeField] private CanvasGroup fadeCanvas;
     [SerializeField] private float fadeDuration = 0.5f;
@@ -47,6 +48,7 @@ public class SceneLoader2 : MonoBehaviour
         if (nextIndex < SceneManager.sceneCountInBuildSettings)
         {
             StartCoroutine(LoadSceneRoutine(nextIndex));
+            DTS.Day++;
         }
         else
         {
