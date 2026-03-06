@@ -699,6 +699,18 @@ MonoBehaviour:
   takikoTrust: 0
   sashaTrust: 0
   trust: 0
+--- !u!114 &1579554018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579554014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1ecd4cd4317b145b1b83c162b4bc69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PhoneMenu
 --- !u!1 &1654579320
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,6 +909,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9078442560890639579, guid: 52571f68872914e24837210513edea1d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1579554017}
+    - targetCorrespondingSourceObject: {fileID: 9078442560890639579, guid: 52571f68872914e24837210513edea1d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1579554018}
   m_SourcePrefab: {fileID: 100100000, guid: 52571f68872914e24837210513edea1d, type: 3}
 --- !u!1 &1908320109
 GameObject:
@@ -1127,10 +1142,54 @@ PrefabInstance:
       propertyPath: m_Name
       value: Image
       objectReference: {fileID: 0}
+    - target: {fileID: 2801467703622496501, guid: 487309941df79924da63def999a1fd95, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2801467703622496501, guid: 487309941df79924da63def999a1fd95, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2801467703622496501, guid: 487309941df79924da63def999a1fd95, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1579554018}
+    - target: {fileID: 2801467703622496501, guid: 487309941df79924da63def999a1fd95, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2801467703622496501, guid: 487309941df79924da63def999a1fd95, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitTT
+      objectReference: {fileID: 0}
+    - target: {fileID: 2801467703622496501, guid: 487309941df79924da63def999a1fd95, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PhoneMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2801467703622496501, guid: 487309941df79924da63def999a1fd95, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2885835716844062551, guid: 487309941df79924da63def999a1fd95, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2885835716844062551, guid: 487309941df79924da63def999a1fd95, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5169857955643048311, guid: 487309941df79924da63def999a1fd95, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1579554017}
+    - target: {fileID: 6483291368548100674, guid: 487309941df79924da63def999a1fd95, type: 3}
+      propertyPath: m_Name
+      value: Quit
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979776116940630773, guid: 487309941df79924da63def999a1fd95, type: 3}
+      propertyPath: m_text
+      value: Quit
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

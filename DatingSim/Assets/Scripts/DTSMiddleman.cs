@@ -40,6 +40,13 @@ public class DTSMiddleman : MonoBehaviour
             dialogueRunner.AddCommandHandler("EmikoTrustDown", etDW);
             dialogueRunner.AddCommandHandler("TakikoTrustDown", ttDW);
             dialogueRunner.AddCommandHandler("SashaTrustDown", stDW);
+            dialogueRunner.AddCommandHandler("ShowCassieTrust", DctT);
+            dialogueRunner.AddCommandHandler("ShowBebeTrust", DbtT);
+            dialogueRunner.AddCommandHandler("ShowNancyTrust", DntT);
+            dialogueRunner.AddCommandHandler("ShowEmikoTrust", DetT);
+            dialogueRunner.AddCommandHandler("ShowTakikoTrust", DttT);
+            dialogueRunner.AddCommandHandler("ShowSashaTrust", DstT);
+
 
             UnityEngine.Debug.Log("Yarn command 'Character Trust Commands' registered successfully");
         }
@@ -93,6 +100,7 @@ public class DTSMiddleman : MonoBehaviour
         trustSlider.value = cassieTrust;
     }
 
+
     public void btUP()
     {
         bebeTrust = bebeTrust + 12.5f;
@@ -124,6 +132,7 @@ public class DTSMiddleman : MonoBehaviour
         trustSlider.value = nancyTrust;
     }
 
+
     public void etUP()
     {
         emikoTrust = emikoTrust + 12.5f;
@@ -134,6 +143,11 @@ public class DTSMiddleman : MonoBehaviour
         emikoTrust = emikoTrust - 12.5f;
         trustSlider.value = emikoTrust;
     }
+    public void DetT()
+    {
+        trustSlider.value = emikoTrust;
+    }
+
 
     public void ttUP()
     {
@@ -143,6 +157,10 @@ public class DTSMiddleman : MonoBehaviour
     public void ttDW()
     {
         takikoTrust = takikoTrust - 12.5f;
+        trustSlider.value = takikoTrust;
+    }
+    public void DttT()
+    {
         trustSlider.value = takikoTrust;
     }
 
@@ -156,6 +174,9 @@ public class DTSMiddleman : MonoBehaviour
         sashaTrust = sashaTrust - 12.5f;
         trustSlider.value = sashaTrust;
     }
-
+    public void DstT()
+    {
+        trustSlider.value = sashaTrust;
+    }
 
 }
