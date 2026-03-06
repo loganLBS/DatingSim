@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 using static System.Net.Mime.MediaTypeNames;
 using System.Security.Cryptography.X509Certificates;
 using System.Diagnostics;
+using System;
 
 public class Persona5MenuController : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class Persona5MenuController : MonoBehaviour
     public RectTransform cursorBlack;
     public RectTransform[] menuItems;
     public SettingsMenu settingsMenu;   // Drag the SettingsPanel here
+    public AudioSource audioSource;      // Drag the AudioSource component here
+    public AudioClip moveSound;          // Sound for cursor movement
+    public AudioClip selectSound;        // Sound for confirming a selection
 
     [Header("Input")]
     public MenuControls inputActions;
@@ -57,12 +61,14 @@ public class Persona5MenuController : MonoBehaviour
                 currentIndex--;
                 if (currentIndex < 0) currentIndex = menuItems.Length - 1;
                 UpdateCursorPosition();
+                PlayMoveSound();
             }
             else if (navigateValue.y < -0.5f) // Down
             {
                 currentIndex++;
                 if (currentIndex >= menuItems.Length) currentIndex = 0;
                 UpdateCursorPosition();
+                PlayMoveSound();
             }
         }
     }
@@ -70,8 +76,23 @@ public class Persona5MenuController : MonoBehaviour
     private void OnSubmit(InputAction.CallbackContext context)
     {
         SelectCurrentItem();
+        PlaySelectSound();
     }
-
+    private void PlaySelectSound()
+    {
+        if (audioSource != null && selectSound != null)
+        {
+            audioSource.PlayOneShot(selectSound);
+        }
+    }
+    private void PlayMoveSound()
+    {
+        if (audioSource != null && moveSound != null)
+        {
+            audioSource.pitch = UnityEngine.Random.Range(0.9f, 1.1f); // slight variation
+            audioSource.PlayOneShot(moveSound);
+        }
+    }
     void UpdateCursorPosition()
     {
         Vector3 newPos = menuItems[currentIndex].position + cursorOffset;
