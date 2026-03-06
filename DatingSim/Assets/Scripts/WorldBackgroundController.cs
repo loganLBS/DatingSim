@@ -48,11 +48,11 @@ public class WorldBackgroundController : MonoBehaviour
                 return;
 
             case "classroom":
-                spriteRenderer.sprite = corridor;
+                spriteRenderer.sprite = classroom;
                 break;
 
             case "reception":
-                spriteRenderer.sprite = corridor;
+                spriteRenderer.sprite = reception;
                 break;
 
             default:

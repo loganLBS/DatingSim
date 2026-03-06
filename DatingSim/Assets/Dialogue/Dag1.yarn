@@ -167,13 +167,17 @@ You walk over and sit down next to a sporty looking girl.
     <<SetMood "Teacher hide">>
 {$playerName}: Hey, im {$playerName} looks like we are gonna be desk-neighbors.
 Sasha laughs
+    <<SetMood "Sasha neutral">>
 Sasha: That’s right, I'm Sasha! And judging by your face... you don’t look like you’ve survived gym class yet.
 {$playerName}: No, Not yet. But I’m ready for a challenge.
-Sasha grind widely
+    <<SetMood "Sasha happy">>
+Sasha grins widely
+    <<SetMood "Sasha neutral">>
 Sasha: That’s the spirit. Just don’t complain when I beat you to a pulp.
 {$playerName}: Already making enemies, huh?
 Sasha: Nah, just friendly competition... for now.
-    <<SetMood "Cassie happy">>
+    <<SetMood "Sasha hide">>
+        <<SetMood "Cassie happy">>
 You glance around the room and spot Cassie giving you a soft, knowing smile. 
     <<SetMood "Cassie hide">>
 The rude girl from before rolls her eyes dramatically. As class begins.
