@@ -48,7 +48,7 @@ public class SceneLoader2 : MonoBehaviour
         if (nextIndex < SceneManager.sceneCountInBuildSettings)
         {
             StartCoroutine(LoadSceneRoutine(nextIndex));
-            DTS.Day++;
+            DTS.NextDay();
         }
         else
         {
