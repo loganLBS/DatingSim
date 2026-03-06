@@ -83,11 +83,13 @@ public class DTSMiddleman : MonoBehaviour
         cassieTrust = cassieTrust + 12.5f;
         trustSlider.value = cassieTrust;
     }
-
-
     public void ctDW()
     {
         cassieTrust = cassieTrust - 12.5f;
+        trustSlider.value = cassieTrust;
+    }
+    public void DctT()
+    {
         trustSlider.value = cassieTrust;
     }
 
@@ -101,6 +103,11 @@ public class DTSMiddleman : MonoBehaviour
         bebeTrust = bebeTrust - 12.5f;
         trustSlider.value = bebeTrust;
     }
+    public void DbtT()
+    {
+        trustSlider.value = bebeTrust;
+    }
+
 
     public void ntUP()
     {
@@ -110,6 +117,10 @@ public class DTSMiddleman : MonoBehaviour
     public void ntDW()
     {
         nancyTrust = nancyTrust - 12.5f;
+        trustSlider.value = nancyTrust;
+    }
+    public void DntT()
+    {
         trustSlider.value = nancyTrust;
     }
 
@@ -145,4 +156,6 @@ public class DTSMiddleman : MonoBehaviour
         sashaTrust = sashaTrust - 12.5f;
         trustSlider.value = sashaTrust;
     }
+
+
 }

@@ -40,5 +40,6 @@ public static class SaveFunction
 
         string json = File.ReadAllText(savePath);
         return JsonUtility.FromJson<SaveInfo>(json);
+        Debug.Log("No save file found");
     }
 }
