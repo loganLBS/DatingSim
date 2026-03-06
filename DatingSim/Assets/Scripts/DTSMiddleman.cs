@@ -7,7 +7,9 @@ using System.Diagnostics;
 
 public class DTSMiddleman : MonoBehaviour
 {
+    public static DTSMiddleman Instance;
     public Slider trustSlider;
+
     public int Day = 0;
     public float cassieTrust = 0;
     public float bebeTrust = 0;
@@ -17,6 +19,18 @@ public class DTSMiddleman : MonoBehaviour
     public float sashaTrust = 0;
     public float trust = 0;
 
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        //else
+        // {
+        //Destroy(gameObject);
+        // }
+    }
     public void UpdateUI()
     {
         trustSlider.value = trust;

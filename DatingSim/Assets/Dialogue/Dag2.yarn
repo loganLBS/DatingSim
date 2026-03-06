@@ -1,4 +1,4 @@
-﻿title: D2_MC_Start1
+title: D2_MC_Start1
 ---
 [Classroom] A new day begins and in your classroom you find Cassie and the rude girl arguing.
     <<SetMood "Takiko unknown">>
@@ -68,18 +68,29 @@ title: D2_T_Positive1
 ---
 {$playerName}: I mean… maybe buttoning it up would help.
 Cassie’s smile falters.
+     <<SetMood "Cassie angry">>
 Cassie: Oh...
+      <<SetMood "Cassie hide">>
+        <<SetMood "Takiko neutral">>
 Takiko grins proudly.
 Takiko: See? Someone has common sense.
 A pout crosses Cassie's lips as she takes her seat.
+    <<SetMood "Takiko happy">>
 Takiko: Dont you dare think i like you now *hmmp*
 Takiko walks back to her seat blushing, leaving you speechless.
+      <<SetMood "Takiko hide">>
 The lessons starts as you take your seat beside Sasha. 
     <<jump D2_B_Corridor1>>
 ===
 
 title: D2_B_Corridor1
 ---
+[Hallway] You see Bebe walking up to you.
+Bebe: MC, wait a minute. 
+You wait for her to walk up to you, she looks serious.
+Bebe: I heard that Cassie and Takiko had an argument, do you know anything about it?
+{$playerName}: They were bickering about Cassie's attire. 
+Bebe: *Ugh* Did you stand up for Cassie then?
 <<if visited("D2_C_Positive1") or visited("D2_MC_Neutral1")>>
 {$playerName}: I told Takiko to leave her alone. 
 Bebe: Good, Takiko always had a brick up her ass. Where is your next lesson?
@@ -90,7 +101,6 @@ Bebe walks you to your study period while telling stories about her's and Cassie
 Bebe: Who are you to tell a girl what she should wear, you moron?!
 Bebe storms away. You walk to the library confused. 
 <<endif>>
-
 As you enter the library you see Emiko sitting in a dark corner.
 You also see Nancy, she's sitting in a cozy corner on the other side of the room.
 Who do you join?
@@ -156,8 +166,8 @@ You take your seat next to her. Opening your books as you begin studying.
 <<wait 2>>
 [Cafeteria] After getting your food from the lunch lady, you look out to see Cassie sitting alone at a table upset about something. 
 You begin walking towards her when you hear a girl shout.
-Sasha: {$playerName}! Come and sit here! *she points to the seat next to her as she sits with her friends*
-    ->You turn away from the loud table and walk toward Cassie.
+Sasha: {$playerName}! Come and sit here! *she points to the seat next to her and her friends*
+    -> You turn away from the loud table and walk toward Cassie.
         She looks up as you approach.
         {$playerName}: Mind if I sit?
         Cassie: Oh! Yeah, of course. I mean— it’s not assigned seating or anything.
@@ -169,8 +179,19 @@ Sasha: {$playerName}! Come and sit here! *she points to the seat next to her as 
         Her smile this time is softer. More genuine.
         Across the room, Sasha notices you didn’t come.
         She leans back in her chair, watching briefly, unreadable.
-
-
-
+    -> You pivot and head toward Sasha’s table.
+        She grins as you approach.
+        Sasha: Took you long enough.
+        You sit beside her, close enough that your shoulders brush.
+        {$playerName}: Didn’t know there were tryouts.
+        Sasha: There aren’t. I scout.
+        Her teammates snicker.
+        Teammate: Careful, she gets intense.
+        Sasha: Only when I plan on winning.
+        She deliberately bumps your knee under the table.
+        Across the cafeteria, Cassie lowers her gaze back to her tray.
+        No expression, no reaction. Just quiet.
+    <<wait 1>>
+    END OF DEMO
 ===
 
