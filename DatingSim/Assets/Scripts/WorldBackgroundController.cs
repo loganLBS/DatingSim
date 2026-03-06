@@ -11,6 +11,8 @@ public class WorldBackgroundController : MonoBehaviour
     public Sprite cafeteria;
     public Sprite gymnasium;
     public Sprite school;
+    public Sprite classroom;
+    public Sprite reception;
 
     void Awake()
     {
@@ -44,6 +46,14 @@ public class WorldBackgroundController : MonoBehaviour
             case "hide":
                 spriteRenderer.enabled = false;
                 return;
+
+            case "classroom":
+                spriteRenderer.sprite = corridor;
+                break;
+
+            case "reception":
+                spriteRenderer.sprite = corridor;
+                break;
 
             default:
                 Debug.LogWarning("Unknown background: " + bgName);

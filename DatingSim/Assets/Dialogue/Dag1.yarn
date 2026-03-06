@@ -28,8 +28,8 @@ Cassie: I'm late so gotta run! Bye-bye!!
 
 title: D1_N_Reception1
 ---
- <<bg corridor>>
-    <<wait 2>>
+ <<bg reception>>
+    <<wait 1>>
 A tall girl with glasses waits next to the desk. You make eye contact.
         <<SetMood "Nancy unknown">>
 ???: Hello.. Are you {$playerName}? I was supposed to show you around the school.
@@ -49,9 +49,11 @@ She turns without waiting to see if you agree.
 
 title: D1_E_Cafeteria1
 ---
-     <<wait 2>>
-[At reception] You say bye to Nancy as you make your way to the cafeteria for lunch.
-[hallway] You bump into something
+     <<wait 1>>
+You say bye to Nancy as you make your way to the cafeteria for lunch.
+<<bg corridor>>
+<<wait 1>>
+You bump into something
       <<SetMood "Takiko unknown">>
 ???: Hey! watch where you're going, idiot!
 {$playerName}: Sorry I didn't see you..
@@ -176,7 +178,7 @@ You glance around the room and spot Cassie giving you a soft, knowing smile.
     <<SetMood "Cassie hide">>
 The rude girl from before rolls her eyes dramatically. As class begins.
 
-[Classroom] The bell rings. Chairs scrape. Students start packing up. 
+The bell rings. Chairs scrape. Students start packing up. 
 Just as you finish putting your notebook away, the classroom door swings open. 
 A girl runs so fast she practically bounces inside the class.
 A bright smile, confident posture and sporatic energy.
