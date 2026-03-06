@@ -86,19 +86,24 @@ The lessons starts as you take your seat beside Sasha.
 title: D2_B_Corridor1
 ---
 [Hallway] You see Bebe walking up to you.
-Bebe: MC, wait a minute. 
+      <<SetMood "Bebe neutral">>
+Bebe: {$playerName}, wait a minute. 
 You wait for her to walk up to you, she looks serious.
 Bebe: I heard that Cassie and Takiko had an argument, do you know anything about it?
 {$playerName}: They were bickering about Cassie's attire. 
+      <<SetMood "Bebe angry">>
 Bebe: *Ugh* Did you stand up for Cassie then?
 <<if visited("D2_C_Positive1") or visited("D2_MC_Neutral1")>>
 {$playerName}: I told Takiko to leave her alone. 
+      <<SetMood "Bebe neutral">>
 Bebe: Good, Takiko always had a brick up her ass. Where is your next lesson?
 {$playerName}: In the library.
 Bebe walks you to your study period while telling stories about her's and Cassie's friendship.
+      <<SetMood "Bebe hide">>
 <<else>>
 {$playerName}: No, I told Cassie that her clothes are not appropriate for school. 
 Bebe: Who are you to tell a girl what she should wear, you moron?!
+      <<SetMood "Bebe hide">>
 Bebe storms away. You walk to the library confused. 
 <<endif>>
 As you enter the library you see Emiko sitting in a dark corner.
@@ -114,6 +119,7 @@ title: D2_E_Library1
 ---
 You walk to the corner where Emiko sits. 
 {$playerName}: What are you doing here?
+      <<SetMood "Emiko angry">>
 Emiko: Reading, can't you see that?
 {$playerName}: I meant, why are you in a corner, did you get punished?
 Emiko: No, it's my favorite place, it's dark, warm, and no one bothers me. 
@@ -122,18 +128,21 @@ Emiko: No, you can stay.
 {$playerName}: Do you want to study together?
 Emiko: No, I prefer to read my book. 
     ->(+ for Emiko) The Bell Jar. I never read that book but I heard it’s good. Can I read with you? 
-        {$playerName}: The Bell Jar. I never read that book but I heard it’s good. Can I read with you?            
+        {$playerName}: The Bell Jar. I never read that book but I heard it’s good. Can I read with you?       
+              <<SetMood "Emiko neutral">>     
         You can see a little smile creep on her face. 
         Emiko : Of course, I didn’t think we would vibe like that. *smiles*
         She scoots to the side, you sit beside her as Emiko gives you an earbud.
+              <<SetMood "Emiko hide">>
     ->(- for Emiko) Don’t we have a study period right now? You should be studying. 
         {$playerName}: Don’t we have a study period right now? You should be studying.
         Emiko: Why would I, it's not like I care?!
         She looks visibly upset. 
         {$playerName}: Shouldn't you care about your future?
         Emiko: You don't understand, I wont have one. 
+              <<SetMood "Emiko hide">>
         Emiko storms off upset. 
-        {$playerName} * What did she mean by not having one*
+        {$playerName}: *What's that supposed to mean?*
 
 ===
 
@@ -141,25 +150,32 @@ title: D2_N_Library1
 ---
 You walk to Nancy, she sits in a cozy corner, with warm lights, a bench sofa with a table connected.
 {$playerName}: Hi Nancy. Do you mind if I sit here?
+    <<SetMood "Nancy neutral">>
 Nancy: If you want. 
 She looks at you suspiciously
 {$playerName}: What are you studying for?
-Nancy: Biologi 3.
+Nancy: Biology 3.
 {$playerName}: Isn't that for third years?
+      <<SetMood "Nancy angry">>
 Nancy: Yeah? *looks at you like you’re stupid*
 {$playerName}: *Ah she is smart smart.*
+      <<SetMood "Nancy hide">>
 You take your seat next to her. Opening your books as you begin studying.
 15 minutes passes.
 {$playerName}: *Damn this question is hard.*
     -> Look it up in the book. 
-        You feel Nancy giving you a quick, pouty glare.
+        You feel Nancy giving you a pouty glare.
+            <<SetMood "Nancy angry">>
         Nancy: You know it’s better to ask for help before looking it up.
         {$playerName}: I didn’t wanna bother you. You looked concentrated.
+             <<SetMood "Nancy neutral">>
         Nancy: *mumbels* I wouldn't mind helping. *she looks down at her book again*
+              <<SetMood "Nancy hide">>
     -> Just give up. 
         After staring at your books for a few seconds you close them and push them to the side as you take up your phone to play a game.
+             <<SetMood "Nancy angry">>
         Nancy: You know this is a study period. Not game period. *she looks at you disapproving*
-        Mc: Sorry… *glare awkwardly*
+        {$playerName}: Sorry… *glare awkwardly*
         Nancy: If you’re just gonna play you can leave. *As she points with her eyes to the door*
         You mumble something in confusion as you quickly pack your bags to get out of there.
         Leaving you see Nancy giving you a nasty glare from above her glasses before going back to her book.

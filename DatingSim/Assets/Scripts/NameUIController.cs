@@ -26,15 +26,14 @@ public class NameUIController : MonoBehaviour
     public void ConfirmName()
     {
         string playerName = nameInputField.text;
+        if (string.IsNullOrEmpty(playerName)) playerName = "Player";
 
-        if (string.IsNullOrEmpty(playerName))
-        {
-            playerName = "Player";
-        }
-
+        // Save to Yarn (for use in current scene)
         dialogueRunner.VariableStorage.SetValue("$playerName", playerName);
 
-        namePanel.SetActive(false);
+        // Save to persistent data (for cross‑scene use)
+        PersistentData.Instance.SetPlayerName(playerName);
 
+        namePanel.SetActive(false);
     }
 }

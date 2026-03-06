@@ -852,6 +852,8 @@ GameObject:
   - component: {fileID: 609926503}
   - component: {fileID: 609926504}
   - component: {fileID: 609926505}
+  - component: {fileID: 609926507}
+  - component: {fileID: 609926506}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -927,6 +929,31 @@ MonoBehaviour:
   fadeCanvas: {fileID: 2010848832}
   fadeDuration: 2
   dialogueRunner: {fileID: 1313636554}
+--- !u!114 &609926506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609926499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 920f4060a9ea7274da568dd3c3ee10f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  dialogueRunner: {fileID: 1313636554}
+--- !u!114 &609926507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609926499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53a821d72ec895c4694b6b1658d0e1e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!224 &669918847 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2355361765340444347, guid: 52571f68872914e24837210513edea1d, type: 3}
