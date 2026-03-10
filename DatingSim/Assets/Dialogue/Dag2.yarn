@@ -184,30 +184,170 @@ You take your seat next to her. Opening your books as you begin studying.
 You begin walking towards her when you hear a girl shout.
 Sasha: {$playerName}! Come and sit here! *she points to the seat next to her and her friends*
     -> You turn away from the loud table and walk toward Cassie.
-        She looks up as you approach.
-        {$playerName}: Mind if I sit?
-        Cassie: Oh! Yeah, of course. I mean— it’s not assigned seating or anything.
-        You sit.
-        There’s a small pause.
-        {$playerName}: You seem quieter than usual.
-        She shrugs, poking at her food.
-        Cassie: Just thinking, I guess.
-        Her smile this time is softer. More genuine.
-        Across the room, Sasha notices you didn’t come.
-        She leans back in her chair, watching briefly, unreadable.
+        <<jump D2_C_Positive2>>
     -> You pivot and head toward Sasha’s table.
-        She grins as you approach.
-        Sasha: Took you long enough.
-        You sit beside her, close enough that your shoulders brush.
-        {$playerName}: Didn’t know there were tryouts.
-        Sasha: There aren’t. I scout.
-        Her teammates snicker.
-        Teammate: Careful, she gets intense.
-        Sasha: Only when I plan on winning.
-        She deliberately bumps your knee under the table.
-        Across the cafeteria, Cassie lowers her gaze back to her tray.
-        No expression, no reaction. Just quiet.
-    <<wait 1>>
-    END OF DEMO
+        <<jump D2_S_Positive1>>
 ===
 
+title: D2_C_Positive2
+---
+You turn away from the loud table and walk toward Cassie.
+She looks up as you approach and across the room, Sasha notices you didn’t come.
+You can see a frown form on Sasha's face for just a second before she snaps back into a loud conversation with her teammates.
+{$playerName}: Mind if I sit?
+Cassie: Oh! Yeah, of course. I mean... it’s not assigned seating or anything.
+You sit.
+There’s a small pause.
+{$playerName}: You seem quieter than usual.
+She pauses for a moment before a pout forms on her lips.
+Cassie: Actually, just before you got here Bebe and I were augmenting about something.
+{$playerName}: Tell me about this argument.
+Cassie: So it started with me telling her about my argument with Takiko this morning and she just kept going on and on about how mean she is and bla bla bla.
+Cassie: And like she was so mean to her and I mean, yeah Takiko can be a little harsh but it’s never that intense. She just wants everything in order as the president.
+Cassie: Then Bebe got mad at me for “defending” Takiko and stormed off.
+You pause for a second to take the information in before answering.
+    -> (negative) No, I get Bebe's point. You shouldn’t let Takiko walk all over you. 
+        {$playerName}: No, I get Bebe's point. You shouldn’t let Takiko walk all over you.
+        Cassie pauses for a moment before her eyebrows burrow.
+        Cassie: You don’t get it! Takiko just is like that. She doesn’t mean anything bad even if it seems like that!
+        She stands up abruptly, taking her tray before looking at you again.
+        Cassie: *hmmp* You’re just like Bebe, nothing gets through to you!
+        She starts walking away from you.
+        {$playerName}: Wait I didn't mean it like that, Cassie!
+        But she doesn't look back and walks in the same direction you saw Bebe leaving. 
+    -> (positive) I get what you’re saying. Takiko ain’t all bad.
+        {$playerName} I get what you’re saying. Takiko ain’t all bad.
+        Cassie's eyes light up immediately.
+        Cassie: You get it! Bebe just gets too protective sometimes.
+        {$playerName}: I think she wants you to stand up for yourself… But it’s hard when she doesn't understand you guys' relationship.
+        Cassie: I know, I should probably find Bebe later to talk it through again.
+        Her eyes sadden for a second before they light up again.
+        Cassie: Whatever, let's talk about something more fun!
+        Cassie: Have you met Kase yet?
+        {$playerName}: Kase? Who’s that?
+        Before Cassie can answer a voice can be heard.
+        ???: Cassie, what's up? No Bebe? Did she get grumpy again?
+        Cassie: Yeah but it’s fineee! I will find her later.
+        A guy drops into the seat next to Cassie like he belongs there. He gives you a quick nod before leaning back in his chair.
+        Kase: So that’s the new guy you've been talking about?
+        Cassie: Yep! This is {$playerName}!
+        {$playerName}: Hey. I guess you’re Kase then?
+        Kase: Yeah. *He looks you up and down for a second.*
+        Kase: So you’re the new dog that’s been following Cassie around. *He mutters it just loud enough for you to hear.*
+        {$playerName}: (thought): Well… that was friendly.
+        Cassie: Kase! Don’t be mean!
+        Kase: Relax, I’m joking.
+        He glances back at you, a faint smirk forming.
+        Kase: Mostly.
+        The conversation drifts on as lunch continues, Cassie chatting brightly while Kase throws in the occasional teasing comment. 
+        Before long the bell rings, cutting through the chatter. Students begin standing and clearing their trays. 
+        You say a quick goodbye to Cassie and Kase before heading out with the rest of the crowd, making your way down the hallway toward your next lesson.
+<<wait 1>>
+<<jump D2_MC_Classroom1>>
+
+===
+
+title: D2_S_Positive1
+---
+You pivot and head toward Sasha’s table.
+She grins as you approach.
+Sasha: Took you long enough.
+You sit beside her, close enough that your shoulders brush.
+{$playerName}: Didn’t know there were tryouts.
+Sasha: There aren’t. I scout.
+Her teammates snicker.
+Teammate: Careful, she gets intense.
+Sasha: Only when I plan on winning.
+She bumps your knee lightly under the table, deliberate.
+    -> (positive) Depends… you planning on going easy on me? 
+        {$playerName}: Depends… you planning on going easy on me?
+        Sasha laughs, a competitive spark lighting up her eyes.
+        Sasha: Not a chance. But I like the confidence.
+        Teammate: Uh oh. She respects that.
+        Sasha leans back in her chair, still grinning.
+        Sasha: Just so you know, confidence like that usually ends with someone getting humbled.
+        {$playerName}: Sounds like you’ve got experience with that.
+        Sasha: Only on the giving end.
+        Her teammates laugh.
+        Teammate: She’s not kidding. Sasha turns everything into a competition.
+        {$playerName}: Everything?
+        Sasha: Everything.
+        She gestures around the table with a playful smirk.
+        Sasha: Games, practice, lunch line speed… I even beat Maya to the vending machine this morning.
+        Teammate (Maya): You ran down the hallway for a soda!
+        Sasha: And I won.
+        {$playerName}: Remind me not to challenge you to anything important.
+        Sasha: Too late. Sitting here already counts.
+        She bumps your knee lightly under the table again, clearly enjoying herself.
+        Teammate: Look at that, Sasha already messing with the new guy.
+        Sasha: Relax, I’m just seeing if he can keep up.
+        {$playerName}: With what?
+        Sasha: With me.
+        Before you can answer, the bell rings, cutting through the cafeteria noise.
+        Students start standing and clearing their trays.
+        Sasha stands up, grabbing her bag.
+        Sasha: Guess lunch is over.
+        {$playerName}: Guess so.
+        Sasha: See you around, {$playerName}.
+        She flashes you a confident grin before heading off with her teammates.
+        You drop your tray off and join the flow of students leaving the cafeteria, making your way through the crowded hallway toward your next lesson.
+    -> (Negative) Honestly? I’m not really into sports.
+        {$playerName}: Honestly? I’m not really into sports.
+        Sasha’s grin fades just a little.
+        Sasha: Really? That’s kind of disappointing.
+        One of her teammates shrugs.
+        Teammate: Guess he’s not making the team.
+        Sasha rolls her eyes at her teammate.
+        Sasha: Relax, not everyone lives at the gym like you guys.
+        {$playerName}: Thanks for the mercy.
+        Sasha: Don’t get used to it.
+        She leans back in her chair, studying you for a moment.
+        Sasha: So if you’re not into sports, what do you do then?
+        M{$playerName}c: Depends. Mostly just trying to survive this school so far.
+        Teammate: Fair enough. First week’s always chaos.
+        Sasha: Yeah, you picked an interesting time to transfer.
+        She taps the table lightly with her fingers.
+        Sasha: Still… you might change your mind eventually.
+        {$playerName}: About sports?
+        Sasha: About a lot of things.
+        Her teammates start talking about practice again, the conversation drifting away from you as the table fills with casual chatter.
+        Then the bell rings, cutting through the cafeteria noise.
+        Students begin standing, grabbing trays, and heading for the doors.
+        Sasha stands up, slinging her bag over her shoulder.
+        Sasha: Later, {$playerName}.
+        {$playerName}: Later.
+        You drop off your tray and follow the stream of students out of the cafeteria, heading down the hallway toward your next lesson.
+<<wait 1>>
+<<jump D2_MC_Classroom1>>
+===
+
+title: D2_MC_Classroom1
+---
+[Last lesson] The bell rings and the classroom settles into its usual low buzz of chatter. 
+Your teacher sets a stack of papers on the desk and looks toward the door. 
+You find yourself sitting alone at your desk, since Sasha is at practice.
+Teacher: Alright everyone, before we begin today's lesson, It’s time to decide the school trip for the year. So the student council will be joining us.
+The door opens and Takiko and Nancy step in. Takiko moves to the front confidently, while Nancy stands beside her, clipboard in hand, giving a polite smile.
+Takiko: *clears throat* Alright, everyone. We’ve narrowed down a few options for this year’s school trip. 
+Takiko: First, a nature hike and camping trip. It’s a chance to get outside, work as a team, and… honestly, test your endurance a bit.
+Nancy: And secondly, we have a museum and city tour. It’s more relaxed, educational, and a great chance to explore the city without too much physical strain.
+Takiko: *nodding* Both trips are great opportunities, it’s just a matter of what the class prefers.
+The class murmurs as everyone starts discussing quietly among themselves. 
+You hear Cassie talking about how nice a city trip would be.
+    -> (+ Takiko) I like the camping idea.
+        You look at Takiko first, nodding. 
+        {$playerName}: I like the camping idea. Sounds like a real adventure.
+        Making Takiko smile as if she’s won a prize.
+        Then glance at Nancy. 
+        {$playerName}: The city tour’s fine, but it feels a bit… tame for me.
+        Nancy nods quietly.
+    -> (+ Nancy) I like the city tour!
+        You turn to Nancy with a smile. 
+        {$playerName}: I like the city tour! Could be fun to explore and relax.
+        Nancy looks at you while trying to keep herself from smiling.
+        Then look at Takiko, shrugging slightly. 
+        {$playerName}: Camping’s cool, but I’m not sure everyone’s up for it.
+        Takiko nods quietly.
+<<wait 1>>
+<<NextDay>>
+===
