@@ -417,6 +417,7 @@ Nancy: Sit. I promise I don’t bite… much.
 
 title: D3_Lunch_Nancy_A
 ---
+    <<SetMood "Nancy neutral">>
 Nancy’s eyes narrow, and a faint blush appears.
 
 Nancy: *coldly* That’s inappropriate.
@@ -428,26 +429,26 @@ Nancy: *sighs* Some of us take our work seriously, {$playerName}. I don’t have
 The mood instantly shifts. Nancy closes her notebook and sits up straighter, clearly annoyed. Your teasing has backfired, and she barely speaks for the rest of lunch.
 
 The bell rings, signaling the end of lunch. You leave the library quietly, realizing you’ve lost some goodwill with Nancy this time.
-
+    <<SetMood "Nancy hide">>
 <<jump D3_MC_Lab1>>
 
 ===
 
 title: D3_Lunch_Nancy_B
 ---
+    <<SetMood "Nancy happy">>
 Nancy’s eyes widen slightly, and a faint blush appears on her cheeks.
 
 Nancy: *tsks, flustered* Watch it, {$playerName}. I’m not used to compliments from… people like you.
 
 {$playerName}: *grinning* “People like me”? That sounds like a challenge.
 
-<<SetMood "Nancy hide">>
 Nancy: *crosses arms, hiding a small smile* Don’t get any ideas.
 
 {$playerName}: I like ideas. Especially the ones that involve you.
 
 Nancy’s blush deepens, and she clears her throat, looking away briefly.
-
+    <<SetMood "Nancy neutral">>
 Nancy: *muttering* You’re impossible…
 
 You both continue talking, joking lightly and teasing, and the mood feels playful, warm, and subtly flirty. The bell rings, signaling the end of lunch. Nancy says a quick bye before she hurries off. You follow a little slower.
@@ -473,42 +474,27 @@ Takiko standing confidently.
 Emiko by the window.
 
 Who do you partner with?
-
--> Nancy
-    <<SetMood "Nancy neutral">>
-    Nancy: Working together could be… efficient.
-
-    {$playerName}: Sounds like a good excuse to spend time with the smartest girl in class.
-
-    Nancy blushes slightly.
-
-    Nancy: Just don’t mess up the experiment.
-
-    <<SetMood "Nancy hide">>
-
--> Takiko
-    <<SetMood "Takiko neutral">>
-    Takiko: You sure you can keep up?
-
-    {$playerName}: I like a challenge.
-
-    Takiko blushes faintly.
-
-    Takiko: Don’t get cocky.
-
-    <<SetMood "Takiko hide">>
-
--> Emiko
-    <<SetMood "Emiko happy">>
-    Emiko: Sure! That’d be nice.
-
-    {$playerName}: Working with you might make chemistry my favorite subject.
-
-    Emiko laughs shyly.
-
-    Emiko: You’re such a goof.
-
-    <<SetMood "Emiko hide">>
+    -> Nancy
+        <<SetMood "Nancy neutral">>
+        Nancy: Working together could be… efficient.
+        {$playerName}: Sounds like a good excuse to spend time with the smartest girl in class.
+        Nancy blushes slightly.
+        Nancy: Just don’t mess up the experiment.
+        <<SetMood "Nancy hide">>
+    -> Takiko
+        <<SetMood "Takiko neutral">>
+        Takiko: You sure you can keep up?
+        {$playerName}: I like a challenge.
+        Takiko blushes faintly.
+        Takiko: Don’t get cocky.
+        <<SetMood "Takiko hide">>
+    -> Emiko
+        <<SetMood "Emiko happy">>
+        Emiko: Sure! That’d be nice.
+        {$playerName}: Working with you might make chemistry my favorite subject.
+        Emiko laughs shyly.
+        Emiko: You’re such a goof.
+        <<SetMood "Emiko hide">>
 
 The bell rings as the experiment finishes.
 
