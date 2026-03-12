@@ -29,6 +29,7 @@ Cassie: I'm late so gotta run! Bye-bye!!
 {$playerName}: B-Bye
     <<wait 1>>
     <<SetMainMood neutral2>>
+    <<SetMood hide>>
 <<jump D1_N_Reception1>>
 ===
 

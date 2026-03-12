@@ -905,7 +905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe9105c41bb17242a5caf469d560820, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DTSMiddleman
-  dialogueRunner: {fileID: 0}
+  dialogueRunner: {fileID: 1313636554}
   trustSlider: {fileID: 0}
   Day: 0
   cassieTrust: 0
@@ -927,7 +927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b00bd87e786f4fa46a482ee3d6b9249f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneLoader2
-  DTS: {fileID: 0}
+  DTS: {fileID: 609926504}
   fadeCanvas: {fileID: 2010848832}
   fadeDuration: 2
   dialogueRunner: {fileID: 1313636554}
@@ -1397,12 +1397,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042254122}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 938.5134, y: 434.85046, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1515.2003, y: 606.19904, z: 0}
+  m_LocalScale: {x: 2.6373627, y: 2.6373627, z: 2.6373627}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 669918847}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1042254125
 MonoBehaviour:
@@ -1821,6 +1821,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2355361765340444347, guid: 52571f68872914e24837210513edea1d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 37638984}
+    - targetCorrespondingSourceObject: {fileID: 2355361765340444347, guid: 52571f68872914e24837210513edea1d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1042254124}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 9078442560890639579, guid: 52571f68872914e24837210513edea1d, type: 3}
       insertIndex: -1
@@ -2770,6 +2773,5 @@ SceneRoots:
   - {fileID: 75385319}
   - {fileID: 1078166385}
   - {fileID: 609926501}
-  - {fileID: 1042254124}
   - {fileID: 1719742606}
   - {fileID: 1025460720}
