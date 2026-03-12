@@ -30,6 +30,7 @@ Cassie: I'm late so gotta run! Bye-bye!!
     <<wait 1>>
     <<SetMainMood neutral2>>
     <<SetMood hide>>
+    <<SetMainMood hide>>
 <<jump D1_N_Reception1>>
 ===
 
