@@ -2,18 +2,22 @@ title: D1_MC_Start1
 ---
 <<set $playerName = "Player">>
 <<bg school>>
+<<SetMainMood happy>>
 {$playerName}: *It's my first day in my new school and I heard there's a lot of pretty girls here!* 
  {$playerName}: *What I really want from this year is to get a girlfriend. but first i should...*
  ...Someone bumps into you.
      <<SetMood "Cassie unknown">>
+     <<SetMainMood angry>>
  ???: Sorry, are you hurt?
 {$playerName}: No I-I'm fine
 ???: That’s good! You must be the new guy? 
     <<SetMood "Cassie neutral">>
+    <<SetMainMood flushed>>
 Cassie: I'm Cassie!
     <<SetMood "Cassie happy">>
 Cassie: What’s your name handsome?
     <<SetMood "Cassie neutral">>
+    <<SetMainMood neutral>>
     <<ShowNameInput SceneManager>>
     <<wait 3>>>
 Cassie: Okay {$playerName}, you must be heading to the reception, right? 
@@ -21,28 +25,33 @@ Cassie: It’s the first door on the right when you enter the school.
     <<SetMood "Cassie happy">>
 Cassie: I'm late so gotta run! Bye-bye!! 
     <<SetMood "Cassie hide">>
+    <<SetMainMood flushed>>
 {$playerName}: B-Bye
     <<wait 1>>
+    <<SetMainMood neutral2>>
 <<jump D1_N_Reception1>>
 ===
 
 title: D1_N_Reception1
 ---
- <<bg reception>>
+  <<bg reception>>
     <<wait 1>>
 A tall girl with glasses waits next to the desk. You make eye contact.
         <<SetMood "Nancy unknown">>
 ???: Hello.. Are you {$playerName}? I was supposed to show you around the school.
+<<SetMainMood flushed>>
 {$playerName}: That’s right.
 ???: Good. I was starting to think you got lost.
 She adjusts her glasses, studying you carefully.
         <<SetMood "Nancy neutral">>
+        <<SetMainMood angry>>
 Nancy: I’m Nancy, student council vice president. 
 Nancy: I’ll be your guide today.
 {$playerName}: *Vice president already… She looks strict.*
 Nancy: Follow me. Lunch starts in thirty minutes, and this place is bigger than it looks.
         <<SetMood "Nancy hide">>
 She turns without waiting to see if you agree.
+<<SetMainMood neutral>>
     <<wait 1>>
 <<jump D1_E_Cafeteria1>>
 ===
@@ -56,32 +65,40 @@ You say bye to Nancy as you make your way to the cafeteria for lunch.
 You bump into something
       <<SetMood "Takiko unknown">>
 ???: Hey! watch where you're going, idiot!
+<<SetMainMood flushed>>
 {$playerName}: Sorry I didn't see you..
 ???: You have eyes for a reason morron. Hmph 
 ???: Get out of my way, germfest.
+<<SetMainMood neutral2>>
 {$playerName}: *what’s her problem.*
       <<SetMood "Takiko hide">>
     <<wait 1>>
     <<bg cafeteria>>
     <<wait 1>>
 Searching for a table to sit at you find a girl sitting all alone.
+<<SetMainMood flushed>>
 {$playerName}: Excuse me, can I sit here?
         <<SetMood "Emiko unknown">>
 She looks up from her papers
 ???: Sure.
+<<SetMainMood neutral2>>
 {$playerName}: So what are you reading?
 ???: Some stuff about the occult, I'm not sure you will find this interesting..
     ->(Plus points) No, I would love to hear! 
+        <<SetMainMood happy>>
         <<jump D1_E_Positive1>>
     ->(Neutral) Not really my thing.
+        <<SetMainMood neutral2>>
         <<jump D1_E_Neutral1>>
     ->(Negative points) Who even reads that crap?
+        <<SetMainMood angry>>
         <<jump D1_E_Negative1>>
 
 ===
 
 title: D1_E_Positive1
 ---
+<<SetMainMood happy>>
 {$playerName}: Actually, it sounds kind of cool.
 ???: ...Really?
 She looks surprised, then slightly pleased.
@@ -97,11 +114,13 @@ A small pause.
 ???: Probably.
 {$playerName}: *Probably?*
         <<SetMood "Emiko neutral">>
+        <<SetMainMood neutral2>>
 Emiko: I’m Emiko, by the way. 
 She gives a small, polite nod.
 A bell can be heard
 Emiko: If you wanna catch a break and talk about some occult things you can usually find me in the library. See you later?
 Emiko is gesturing for your name
+<<SetMainMood flushed>>
 {$playerName}: {$playerName}
 Emiko: {$playerName}, catch you later. 
      <<SetMood "Emiko hide">>
@@ -110,13 +129,16 @@ Emiko: {$playerName}, catch you later.
 
 title: D1_E_Neutral1
 ---
+<<SetMainMood neutral2>>
 {$playerName}: Not really my thing, but that’s cool. What’s your name?
     <<SetMood "Emiko neutral">>
 ???: No I get that, my name's Emiko, you?
 {$playerName}: I’m {$playerName}.
 Emiko: Nice to meet you, {$playerName}.
 She gives a small nod, dark bangs shifting slightly.
+<<SetMainMood angry>>
 {$playerName}: *She looks intimidating… but she’s actually pretty chill.*
+<<SetMainMood neutral2>>
 Emiko: So, first day nerves yet? Or are you one of those people who just walks into new places like you own them?
 {$playerName}: I think I’m somewhere inbetween. I’m nervous... just trying not to show it.
 Emiko: Honest answer. Rare.
@@ -128,27 +150,33 @@ There’s a brief pause as a bell can be heard.
 {$playerName} (thought): She talks as though she’s analyzing a science experiment.
 Emiko: You don’t seem boring, though. That’s a good start.
 {$playerName}: I’ll take that as a compliment.
+<<SetMainMood happy>>
 Emiko: You should. I don’t give those often.
 She gestures down the corridor.
 Emiko: Class is about to start, we should get going.
+<<SetMainMood neutral2>>
     <<SetMood "Emiko hide">>
     <<jump D1_B_Classroom1>>
 ===
 
 title: D1_E_Negative1
 ---
+<<SetMainMood angry>>
 {$playerName}: Who even reads that crap?
 Silence.
 Her expression freezes. The air suddenly feels colder.
 ???: ...I see.
 Her eyes turn cold. When she speaks again, her voice is calm, too calm.
 ???: Thank you for your honest opinion.
+<<SetMainMood flushed>>
 {$playerName}: *That did not come out how I meant it.*
+<<SetMainMood neutral2>>
 ???: In that case, I won’t waste your time explaining it.
 She turns slightly, as if ready to leave.
 {$playerName}: Wait, I…
 ???: My class is about to start.
 She starts walking, posture perfectly straight.
+<<SetMainMood angry>>
 {$playerName}: *Great. First day, and I already offended someone.*
     <<SetMood "Emiko hide">>
 <<wait 1>>
@@ -159,6 +187,7 @@ She starts walking, posture perfectly straight.
 title: D1_B_Classroom1
 ---
  <<bg classroom>>
+ <<SetMainMood neutral>>
  <<wait 2>>
 Introducing yourself to the class you see a few familiar faces. Cassie and the rude girl from before is among them.
     <<SetMood "Teacher Neutral">>
@@ -167,22 +196,26 @@ You walk over and sit down next to a sporty looking girl.
     <<SetMood "Teacher hide">>
 {$playerName}: Hey, im {$playerName} looks like we are gonna be desk-neighbors.
 Sasha laughs
-    <<SetMood "Sasha neutral">>
+<<SetMood "Sasha neutral">>
 Sasha: That’s right, I'm Sasha! And judging by your face... you don’t look like you’ve survived gym class yet.
+<<SetMainMood angry>>
 {$playerName}: No, Not yet. But I’m ready for a challenge.
     <<SetMood "Sasha happy">>
 Sasha grins widely
     <<SetMood "Sasha neutral">>
+<<SetMainMood happy>>
 Sasha: That’s the spirit. Just don’t complain when I beat you to a pulp.
+<<SetMainMood angry>>
 {$playerName}: Already making enemies, huh?
 Sasha: Nah, just friendly competition... for now.
-    <<SetMood "Sasha hide">>
-        <<SetMood "Cassie happy">>
+<<SetMainMood neutral2>>
+<<SetMood "Sasha hide">>
+    <<SetMood "Cassie happy">>
 You glance around the room and spot Cassie giving you a soft, knowing smile. 
     <<SetMood "Cassie hide">>
 The rude girl from before rolls her eyes dramatically. As class begins.
 
-The bell rings. Chairs scrape. Students start packing up. 
+[Classroom] The bell rings. Chairs scrape. Students start packing up. 
 Just as you finish putting your notebook away, the classroom door swings open. 
 A girl runs so fast she practically bounces inside the class.
 A bright smile, confident posture and sporatic energy.
@@ -197,6 +230,7 @@ Cassie’s voice softens instantly. She looks genuinely happy to see her.
     <<SetMood "Bebe neutral">>
 Bebe: Bae how was your day! Nobody bothered you, right? 
 She scans the room like a bodyguard checking for threats.
+<<SetMainMood flushed>>
 {$playerName}: *Is she... inspecting us?*
     <<SetMood "Bebe hide">>
     <<SetMood "Cassie neutral">>
@@ -205,6 +239,7 @@ She gestures toward you.
 Cassie: Oh! This is the new student I told you about.
     <<SetMood "Cassie hide">>
 Bebe turns. Her attention locks onto you.
+<<SetMainMood angry>>
 You suddenly feel very suspicious.
     <<SetMood "Bebe angry">>
 Bebe: So you’re the transfer.
@@ -214,8 +249,10 @@ Bebe: I heard. tch
 She side-eyes you
     <<SetMood "Bebe hide">>
     -> Ah, I hope she didnt say anything bad.
+        <<SetMainMood neutral2>>
         <<jump D1_B_Neutral1>>
     -> I hope she only told the good things.
+        <<SetMainMood happy>>
         <<jump D1_B_Positive1>>
 
 ===
@@ -234,6 +271,7 @@ Cassie giggles softly beside you, just happy to see her friend’s instantaneous
     <<SetMood "Bebe neutral">>
 Bebe: Don’t overthink it, Trouble. Life’s more fun when you roll with the chaos.
     <<SetMood "Bebe happy">>
+    <<SetMainMood flushed>>
 She nudges you lightly with her elbow, playful and teasing. Before they walk away together chatting to themselves
     <<SetMood "Bebe hide">>
     <<NextDay>>
@@ -247,9 +285,11 @@ title: D1_B_Positive1
 Bebe steps closer, her protective glare softening into a teasing smile.
     <<SetMood "Bebe happy">>
 Bebe: Maybe, maybe not.
+<<SetMainMood angry>>
 She leans closer, tilting her head playfully.
 Bebe: Maybe I should keep an eye on you...
 {$playerName}: Wait, she’s flirting with me?
+<<SetMainMood flushed>>
 Cassie giggles, clearly used to Bebe’s antics
     <<SetMood "Bebe neutral">>
 Babe: Don’t let her smile fool you… I’m still in charge here.
