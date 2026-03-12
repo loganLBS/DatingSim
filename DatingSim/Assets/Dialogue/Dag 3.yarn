@@ -1,0 +1,517 @@
+title: D3_MC_Start1
+---
+<<bg corridor>>
+The hallway is already busy before the first lesson. Lockers slam shut, people greet their friends, and the usual morning chaos fills the corridor.
+
+You’re heading toward your classroom when a familiar voice stops you.
+
+<<SetMood "Bebe neutral">>
+Bebe: Well, if it isn’t Cassie’s new favorite person.
+
+{$playerName}: That’s a bold claim this early in the morning.
+
+Bebe: Please. Cassie talked about you enough yesterday.
+Bebe: I figured I should say hi before she drags you away again.
+
+{$playerName}: Is that jealousy I’m hearing?
+
+Bebe raises an eyebrow.
+
+Bebe: Careful, {$playerName}. Flirting with me this early might ruin your reputation.
+
+{$playerName}: I didn’t know I had one.
+
+Bebe: You do now.
+Bebe: So tell me something. Are you always this charming, or are you just trying to impress me?
+
+-> (Plus Bebe) Maybe a little of both
+    {$playerName}: Maybe a little of both.
+    Bebe laughs softly.
+    Bebe: Bold answer. I respect it.
+-> (Neutral) I'm just being myself
+    {$playerName}: I’m just being myself.
+    Bebe shrugs.
+    Bebe: Fair enough. Guess we’ll see how long that lasts here.
+
+<<SetMood "Bebe hide">>
+<<SetMood "Kase neutral">>
+Kase: There you are.
+
+{$playerName}: Morning.
+
+Kase: Morning.
+
+<<SetMood "Kase hide">>
+<<SetMood "Bebe neutral">>
+Bebe: We were just talking.
+
+<<SetMood "Bebe hide">>
+<<SetMood "Kase neutral">>
+Kase: Uh huh. That what we’re calling it?
+
+<<SetMood "Kase hide">>
+<<SetMood "Bebe neutral">>
+Bebe: Don’t start.
+
+The warning bell rings.
+
+<<SetMood "Bebe hide">>
+<<SetMood "Kase neutral">>
+Kase: That’s our cue.
+
+<<SetMood "Kase hide">>
+<<SetMood "Bebe neutral">>
+Bebe: See you later, {$playerName}.
+
+<<SetMood "Bebe hide">>
+
+You continue toward class.
+<<jump D3_C_Classroom1>>
+===
+
+title: D3_C_Classroom1
+---
+<<bg classroom>>
+
+Across the room Cassie notices you approaching.
+
+<<SetMood "Cassie happy">>
+Cassie: Hey! You made it on time.
+
+{$playerName}: I’ve got the hang of this place… mostly.
+
+Cassie giggles.
+
+Cassie: “Mostly” sounds promising.
+Cassie: So… did you figure out what you want for the school trip?
+
+-> (Neutral) Hmm… I was thinking the mountains.
+    {$playerName}: Hmm… I was thinking the mountains.
+    Cassie pouts playfully.
+    Cassie: I see how it is… trying to make me leave the city behind!
+-> (Plus Cassie) The city trip sounds great.
+    {$playerName}: The city trip sounds great.
+    Cassie beams.
+    Cassie: Right?! Museums, cafes… it sounds amazing!
+
+The teacher begins the lesson.
+
+<<SetMood "Cassie hide">>
+
+<<bg corridor>>
+
+You spot Emiko sneaking out near the gym. Her eyes meet yours before she quickly joins you.
+      <<SetMood "Emiko neutral">>
+Emiko: Hey, want to skip for a bit? We could hang out outside if you like.
+    -> (+ for Emiko) Sure, lead the way.
+        <<jump D3_Emiko_Positive1>>
+    -> (Neutral) Sorry, maybe next time.
+        <<jump D3_Emiko_Negative1>>
+===
+
+title: D3_Emiko_Positive1
+---
+{$playerName}: Sure, lead the way.
+      <<SetMood "Emiko happy">>
+Emiko: Thanks… I wasn’t sure if anyone would notice.
+{$playerName}: You could say I’m observant. Or maybe I just like sneaking around with you.
+      <<SetMood "Emiko blush">>
+Emiko: *laughs softly* You’re weird… but not in a bad way.
+You find a quiet spot outside the school, where the sun hits just right on the benches by the trees. You sit together, chatting about school, hobbies, and random funny things that happened over the past week.
+{$playerName}: You know… you look a lot better when you’re not hiding from everyone.
+      <<SetMood "Emiko blush">>
+Emiko: *blushing* Stop it… you’re making me… uh… I mean, I’m fine!
+The conversation continues, light and playful, and you feel a connection forming as the minutes pass by. It’s calm, fun, and maybe… a little flirty.
+      <<SetMood "Emiko happy">>
+Emiko: I’m glad you came with me.
+{$playerName}: Me too.
+The bell rings, signaling it’s time to head back. You both stand up, linking arms briefly as you make your way back toward class.
+      <<SetMood "Emiko hide">>
+ <<jump D3_S_Gym1>>
+===
+
+title: D3_Emiko_Negative1
+---
+{$playerName}: Sorry, maybe next time.
+      <<SetMood "Emiko neutral">>
+Emiko’s smile falters slightly, but she nods.
+Emiko: Yeah… okay. See you later, then.
+      <<SetMood "Emiko hide">>
+You watch her head back toward the gym before you continue to your own class.
+ <<jump D3_S_Gym1>>
+===
+
+title: D3_S_Gym1
+---
+<<bg gymnasium>>
+
+    <<SetMood "Teacher neutral">>
+Teacher: Alright everyone, pick a side! Blue team or red team!
+You glance around. Sasha is warming up near one side, bouncing a basketball effortlessly.
+-> (+ for Sasha) Join the blue team
+        <<SetMood "Teacher hide">>
+        <<SetMood "Sasha neutral">>
+        You head over to the blue team, and Sasha immediately spots you.
+        Sasha: Finally! Don’t let me carry the team alone.
+        {$playerName}: Wouldn’t dream of it.
+        <<SetMood "Sasha happy">>
+        The game starts, and you pass, dribble, and shoot alongside her. Sasha is competitive but playful, teasing you every time you miss a shot. Her energy is infectious, and you find yourself keeping pace with her.
+        Sasha: Not bad… you might actually be useful.
+        {$playerName}: Only because you make it fun.
+        The game ends with your team winning. Blue team cheers, Sasha laughs, and high-fives you before running off to grab a water bottle.
+        Sasha: That was awesome. We should do that again sometime.
+-> (+ for Takiko) Join the red team
+    <<SetMood "Teacher hide">>
+    <<SetMood "Takiko neutral">>
+    You join the red team, opposite Sasha. The game starts fast.
+    Sasha: You’re on my side of the court now? Fine. I won’t go easy.
+    {$playerName}: That’s… terrifying.
+    <<SetMood "Takiko hide">>
+    <<SetMood "Sasha angry">>
+    She dribbles, sprinting past you. When you try to block her, her elbow accidentally hits your side, and you stumble.
+    {$playerName}: *groaning* Ow…
+    <<SetMood "Sasha hide">>
+    <<SetMood "Takiko neutral">>
+    Takiko, supervising nearby, notices immediately and strides over.
+    Takiko: Hey! Are you okay?
+    {$playerName}: I… think I got hit.
+    Takiko: *sighs* Figures you’d get yourself hurt. Come on, I’ll take you to the infirmary.
+    She helps you up, supporting your weight, and you make a show of leaning slightly closer than necessary.
+    {$playerName}: You know… you make falling look like less of a punishment.
+    Takiko: *snorts* Don’t get any ideas. I’m not babysitting you for your flirting.
+    {$playerName}: *grinning* Flirting or not, I’d say it’s working.
+<<SetMood "Sasha hide">>
+<<SetMood "Takiko hide">>
+<<jump D3_MC_Cafeteria1>>
+===
+
+title: D3_MC_Cafeteria1
+---
+<<bg cafeteria>>
+The lunch bell rings, and the cafeteria is buzzing with activity. Students line up for food, laughing and joking, trays clattering. You grab your tray and look around for somewhere to sit.
+Your eyes scan the room and you spot a few familiar faces.
+    <<SetMood "Bebe hide">>
+Bebe, sitting with Cassie and Kase, waving at you. 
+    <<SetMood "Cassie hide">>
+Cassie waves excitedly.
+    <<SetMood "Sasha hide">>
+Sasha, already surrounded by her basketball friends, laughing loudly.
+    <<SetMood "Nancy hide">>
+A quieter table near the library entrance where Nancy, the student council vice president, sits with some papers, looking organized and approachable.
+
+{$playerName} (thought): Hmm… who should I sit with today?
+
+-> A. Join Bebe and Cassie
+    <<jump D3_Lunch_Bebe>>
+-> B. Join Sasha
+    <<jump D3_Lunch_Sasha>>
+-> C. Join Nancy
+    <<jump D3_Lunch_Nancy>>
+
+===
+
+title: D3_Lunch_Bebe
+---
+<<SetMood "Bebe neutral">>
+You grab your tray and head over to the table where Bebe, Cassie, and Kase are sitting. Bebe spots you first and waves with a playful grin.
+
+Bebe: Finally! Took you long enough.
+
+<<SetMood "Cassie neutral">>
+Cassie looks up from her tray and beams at you.
+
+Cassie: Hey! Sit here!
+
+<<SetMood "Kase neutral">>
+Kase glances at you with a smirk.
+
+Kase: Oh, look who decided to join us.
+
+You take the seat between Bebe and Kase. 
+
+<<SetMood "Bebe hide">>
+Bebe nudges your shoulder lightly.
+
+Bebe: You always find an excuse.
+
+<<SetMood "Cassie hide">>
+Cassie looks up from her tray and beams.
+
+Cassie: Hey! Sit here!
+
+<<SetMood "Kase hide">>
+Kase glances at you with a smirk.
+
+Kase: Oh, look who decided to join us.
+
+{$playerName}: Had to make sure the food line wasn’t deadly first.
+
+Bebe: You always find an excuse.
+
+Cassie: Hey! Sit here!
+
+Kase: Oh, look who decided to join us.
+
+{$playerName}: Oh, it’s the expert on lunch seating, huh?
+
+Kase: *rolls her eyes* Please. You’re barely keeping up with Cassie, as usual.
+
+{$playerName}: Hey! I’m doing fine… unlike some people who think showing up is enough.
+
+Bebe: *snorts* Wow, don’t bite off more than you can chew, new guy.
+
+Kase: *grinning* She’s right.
+
+{$playerName}: *smirking* Maybe I like a little challenge.
+
+Cassie: *giggles, elbowing Bebe lightly* You two are ridiculous.
+
+<<SetMood "Bebe neutral">>
+Bebe leans closer, lowering her voice just for you.
+
+-> A. *Talking to Bebe* Oh, I can talk big… and back it up if you’re interested.
+    <<jump D3_Lunch_Bebe_A>>
+-> B. *Talking to Cassie* Don’t tell me you’re going to let him outshine me at lunch, Cassie.
+    <<jump D3_Lunch_Bebe_B>>
+
+===
+
+title: D3_Lunch_Bebe_A
+---
+Bebe smirks, clearly enjoying it.
+
+Bebe: *playfully* Oh, I’m interested.
+
+The three of you continue bickering back and forth, your table erupting with laughter. Kase occasionally throws in a sarcastic comment, but mostly just shakes his head at the chaos.
+
+Cassie: Can you two stop arguing for two seconds?
+
+Bebe: *teasing* Not a chance.
+
+{$playerName}: Guess it’s time to go.
+
+Bebe: *grinning at you* Don’t take too long… I expect a rematch tomorrow.
+
+Cassie: *smiling* See you in class, {$playerName}!
+
+Kase: *grumbling* Ugh… can’t believe I have to deal with you again.
+
+<<jump D3_MC_Lab1>>
+
+===
+
+title: D3_Lunch_Bebe_B
+---
+Cassie: *blushes, giggling* I think you’re exaggerating, {$playerName}… but I like your confidence.
+
+Kase: *groans, throwing up his hands* You’re both hopeless.
+
+{$playerName}: And yet, somehow… you keep watching, don’t you?
+
+Kase: *muttering* I hate that you know exactly what to say.
+
+The bell rings, cutting through the laughter. Students start standing and heading to their next class.
+
+{$playerName}: Guess it’s time to go.
+
+Bebe: *grinning at you* Don’t take too long… I expect a rematch tomorrow.
+
+Cassie: *smiling* See you in class, {$playerName}!
+
+Kase: *grumbling* Ugh… can’t believe I have to deal with you again.
+
+<<jump D3_MC_Lab1>>
+
+===
+
+title: D3_Lunch_Sasha
+---
+<<SetMood "Sasha neutral">>
+You grab your tray and spot Sasha sitting with her usual group of friends, laughing loudly. She waves at you from across the table.
+
+Sasha: About time! Thought you were going to hide today.
+
+{$playerName}: Can’t let you win that easily, can I?
+
+Sasha: Careful, I get competitive… even at lunch.
+
+{$playerName}: Good. I like a challenge.
+
+<<SetMood "Sasha hide">>
+Her teammates snicker from the side.
+
+Teammate: Uh oh… he’s on her level?
+
+Sasha: *grinning* Maybe. But don’t get too confident yet.
+
+You sit down next to her, close enough that your shoulders brush.
+
+{$playerName}: So, team captain, how’s practice been? Crushing everyone like usual?
+
+Sasha: *laughs* You know it. Can’t let the newbies think they stand a chance.
+
+{$playerName}: *smirking* Guess I’ll have to prove I’m worth your attention.
+
+-> A. Only one way to find out… maybe over a rematch after lunch?
+    <<jump D3_Lunch_Sasha_A>>
+-> B. We’ll see if your skills are all talk.
+    <<jump D3_Lunch_Sasha_B>>
+
+===
+
+title: D3_Lunch_Sasha_A
+---
+Sasha leans closer, smirking, clearly enjoying the playful energy.
+
+Sasha: Bold. I like it. Don’t let me regret inviting you.
+
+The conversation continues as Sasha teases and challenges you while her friends joke along, creating a lively, energetic lunch. The bell rings, signaling the end of lunch.
+
+Sasha: That’s our cue. Don’t think this is over, {$playerName}.
+
+{$playerName}: Wouldn’t dream of it.
+
+<<jump D3_MC_Lab1>>
+
+===
+
+title: D3_Lunch_Sasha_B
+---
+Sasha laughs, bumping your shoulder lightly.
+
+Sasha: Careful, you might get hurt if you underestimate me.
+
+The conversation continues as Sasha teases and challenges you while her friends joke along, creating a lively, energetic lunch. The bell rings, signaling the end of lunch.
+
+Sasha: That’s our cue. Don’t think this is over, {$playerName}.
+
+{$playerName}: Wouldn’t dream of it.
+
+<<jump D3_MC_Lab1>>
+===
+
+title: D3_Lunch_Nancy
+---
+<<SetMood "Nancy neutral">>
+You grab your tray and head to the quiet table near the library entrance. Nancy looks up from her stack of papers and gives a polite smile.
+
+Nancy: Hey, {$playerName}. You decided to join the quiet side today?
+
+{$playerName}: Someone has to balance out all the chaos in this school.
+
+Nancy: *raises an eyebrow* Is that your way of saying I’m boring?
+
+{$playerName}: Not boring… just focused. I like that.
+
+<<SetMood "Nancy hide">>
+Nancy chuckles softly and gestures to the empty seat across from her.
+
+Nancy: Sit. I promise I don’t bite… much.
+
+-> A. So… do all vice presidents look this good while working, or is it just you?
+    <<jump D3_Lunch_Nancy_A>>
+-> B. Well, I have to say… you make “tedious” look… impressive.
+    <<jump D3_Lunch_Nancy_B>>
+
+===
+
+title: D3_Lunch_Nancy_A
+---
+Nancy’s eyes narrow, and a faint blush appears.
+
+Nancy: *coldly* That’s inappropriate.
+
+{$playerName}: *laughs awkwardly* I was just joking…
+
+Nancy: *sighs* Some of us take our work seriously, {$playerName}. I don’t have time for… distractions.
+
+The mood instantly shifts. Nancy closes her notebook and sits up straighter, clearly annoyed. Your teasing has backfired, and she barely speaks for the rest of lunch.
+
+The bell rings, signaling the end of lunch. You leave the library quietly, realizing you’ve lost some goodwill with Nancy this time.
+
+<<jump D3_MC_Lab1>>
+
+===
+
+title: D3_Lunch_Nancy_B
+---
+Nancy’s eyes widen slightly, and a faint blush appears on her cheeks.
+
+Nancy: *tsks, flustered* Watch it, {$playerName}. I’m not used to compliments from… people like you.
+
+{$playerName}: *grinning* “People like me”? That sounds like a challenge.
+
+<<SetMood "Nancy hide">>
+Nancy: *crosses arms, hiding a small smile* Don’t get any ideas.
+
+{$playerName}: I like ideas. Especially the ones that involve you.
+
+Nancy’s blush deepens, and she clears her throat, looking away briefly.
+
+Nancy: *muttering* You’re impossible…
+
+You both continue talking, joking lightly and teasing, and the mood feels playful, warm, and subtly flirty. The bell rings, signaling the end of lunch. Nancy says a quick bye before she hurries off. You follow a little slower.
+
+<<jump D3_MC_Lab1>>
+===
+
+title: D3_MC_Lab1
+---
+<<bg classroom>>
+
+Students enter chemistry lab.
+
+<<SetMood "Teacher neutral">>
+Teacher: Partner lab today!
+
+<<SetMood "Teacher hide">>
+
+You look around.
+
+Nancy reviewing notes.
+Takiko standing confidently.
+Emiko by the window.
+
+Who do you partner with?
+
+-> Nancy
+    <<SetMood "Nancy neutral">>
+    Nancy: Working together could be… efficient.
+
+    {$playerName}: Sounds like a good excuse to spend time with the smartest girl in class.
+
+    Nancy blushes slightly.
+
+    Nancy: Just don’t mess up the experiment.
+
+    <<SetMood "Nancy hide">>
+
+-> Takiko
+    <<SetMood "Takiko neutral">>
+    Takiko: You sure you can keep up?
+
+    {$playerName}: I like a challenge.
+
+    Takiko blushes faintly.
+
+    Takiko: Don’t get cocky.
+
+    <<SetMood "Takiko hide">>
+
+-> Emiko
+    <<SetMood "Emiko happy">>
+    Emiko: Sure! That’d be nice.
+
+    {$playerName}: Working with you might make chemistry my favorite subject.
+
+    Emiko laughs shyly.
+
+    Emiko: You’re such a goof.
+
+    <<SetMood "Emiko hide">>
+
+The bell rings as the experiment finishes.
+
+<<NextDay>>
+
+===
