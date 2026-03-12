@@ -213,59 +213,49 @@ A quieter table near the library entrance where Nancy, the student council vice 
 title: D3_Lunch_Bebe
 ---
 <<SetMood "Bebe neutral">>
-You grab your tray and head over to the table where Bebe, Cassie, and Kase are sitting. Bebe spots you first and waves with a playful grin.
+You grab your tray and head over to the table where Bebe, Cassie, and Kase are sitting. 
+Bebe spots you first and waves with a playful grin.
 
 Bebe: Finally! Took you long enough.
-
-<<SetMood "Cassie neutral">>
+    <<SetMood "Bebe hide">>
+        <<SetMood "Cassie neutral">>
 Cassie looks up from her tray and beams at you.
 
 Cassie: Hey! Sit here!
-
-<<SetMood "Kase neutral">>
+    <<SetMood "Cassie hide">>
+        <<SetMood "Kase neutral">>
 Kase glances at you with a smirk.
 
 Kase: Oh, look who decided to join us.
 
 You take the seat between Bebe and Kase. 
-
-<<SetMood "Bebe hide">>
+    <<SetMood "Kase hide">>
+        <<SetMood "Bebe neutral">>
 Bebe nudges your shoulder lightly.
 
-Bebe: You always find an excuse.
-
-<<SetMood "Cassie hide">>
-Cassie looks up from her tray and beams.
-
-Cassie: Hey! Sit here!
-
-<<SetMood "Kase hide">>
-Kase glances at you with a smirk.
-
-Kase: Oh, look who decided to join us.
-
 {$playerName}: Had to make sure the food line wasn’t deadly first.
-
+    <<SetMood "Kase hide">>
+        <<SetMood "bebe neutral">>
 Bebe: You always find an excuse.
-
-Cassie: Hey! Sit here!
-
-Kase: Oh, look who decided to join us.
 
 {$playerName}: Oh, it’s the expert on lunch seating, huh?
-
+    <<SetMood "bebe hide">>
+        <<SetMood "Kase neutral">>
 Kase: *rolls her eyes* Please. You’re barely keeping up with Cassie, as usual.
 
 {$playerName}: Hey! I’m doing fine… unlike some people who think showing up is enough.
-
+    <<SetMood "Kase hide">>
+        <<SetMood "Bebe neutral">>
 Bebe: *snorts* Wow, don’t bite off more than you can chew, new guy.
-
+    <<SetMood "Bebe hide">>
+        <<SetMood "Kase neutral">>
 Kase: *grinning* She’s right.
 
 {$playerName}: *smirking* Maybe I like a little challenge.
-
+    <<SetMood "Kase hide">>
+        <<SetMood "Cassie neutral">>
 Cassie: *giggles, elbowing Bebe lightly* You two are ridiculous.
-
+    <<SetMood "Cassie hide">>
 <<SetMood "Bebe neutral">>
 Bebe leans closer, lowering her voice just for you.
 
@@ -282,28 +272,35 @@ Bebe smirks, clearly enjoying it.
 
 Bebe: *playfully* Oh, I’m interested.
 
-The three of you continue bickering back and forth, your table erupting with laughter. Kase occasionally throws in a sarcastic comment, but mostly just shakes his head at the chaos.
-
+The three of you continue bickering back and forth, your table erupting with laughter. 
+Kase occasionally throws in a sarcastic comment, but mostly just shakes his head at the chaos.
+    <<SetMood "Bebe hide">>
+        <<SetMood "Cassie neutral">>
 Cassie: Can you two stop arguing for two seconds?
-
+    <<SetMood "Cassie hide">>
+        <<SetMood "Bebe neutral">>
 Bebe: *teasing* Not a chance.
 
 {$playerName}: Guess it’s time to go.
 
 Bebe: *grinning at you* Don’t take too long… I expect a rematch tomorrow.
-
+    <<SetMood "Bebe hide">>
+        <<SetMood "Cassie neutral">>
 Cassie: *smiling* See you in class, {$playerName}!
-
+    <<SetMood "Cassie hide">>
+        <<SetMood "Kase neutral">>
 Kase: *grumbling* Ugh… can’t believe I have to deal with you again.
-
+    <<SetMood "Kase hide">>
 <<jump D3_MC_Lab1>>
 
 ===
 
 title: D3_Lunch_Bebe_B
 ---
+<<SetMood "Cassie happy">>
 Cassie: *blushes, giggling* I think you’re exaggerating, {$playerName}… but I like your confidence.
-
+    <<SetMood "Cassie hide">>
+        <<SetMood "Kase angry">>
 Kase: *groans, throwing up his hands* You’re both hopeless.
 
 {$playerName}: And yet, somehow… you keep watching, don’t you?
@@ -313,13 +310,16 @@ Kase: *muttering* I hate that you know exactly what to say.
 The bell rings, cutting through the laughter. Students start standing and heading to their next class.
 
 {$playerName}: Guess it’s time to go.
-
+    <<SetMood "Kase hide">>
+        <<SetMood "Bebe happy">>
 Bebe: *grinning at you* Don’t take too long… I expect a rematch tomorrow.
-
+    <<SetMood "Bebe hide">>
+        <<SetMood "Cassie neutral">>
 Cassie: *smiling* See you in class, {$playerName}!
-
+    <<SetMood "Cassie hide">>
+        <<SetMood "Kase neutral">>
 Kase: *grumbling* Ugh… can’t believe I have to deal with you again.
-
+        <<SetMood "Kase hide">>
 <<jump D3_MC_Lab1>>
 
 ===
@@ -341,7 +341,7 @@ Sasha: Careful, I get competitive… even at lunch.
 Her teammates snicker from the side.
 
 Teammate: Uh oh… he’s on her level?
-
+<<SetMood "Sasha happy">>
 Sasha: *grinning* Maybe. But don’t get too confident yet.
 
 You sit down next to her, close enough that your shoulders brush.
@@ -349,7 +349,7 @@ You sit down next to her, close enough that your shoulders brush.
 {$playerName}: So, team captain, how’s practice been? Crushing everyone like usual?
 
 Sasha: *laughs* You know it. Can’t let the newbies think they stand a chance.
-
+<<SetMood "Sasha neutral">>
 {$playerName}: *smirking* Guess I’ll have to prove I’m worth your attention.
 
 -> A. Only one way to find out… maybe over a rematch after lunch?
@@ -370,7 +370,7 @@ The conversation continues as Sasha teases and challenges you while her friends 
 Sasha: That’s our cue. Don’t think this is over, {$playerName}.
 
 {$playerName}: Wouldn’t dream of it.
-
+<<SetMood "Sasha hide">>
 <<jump D3_MC_Lab1>>
 
 ===
@@ -380,34 +380,33 @@ title: D3_Lunch_Sasha_B
 Sasha laughs, bumping your shoulder lightly.
 
 Sasha: Careful, you might get hurt if you underestimate me.
-
+<<SetMood "Sasha neutral">>
 The conversation continues as Sasha teases and challenges you while her friends joke along, creating a lively, energetic lunch. The bell rings, signaling the end of lunch.
 
 Sasha: That’s our cue. Don’t think this is over, {$playerName}.
 
 {$playerName}: Wouldn’t dream of it.
-
+<<SetMood "Sasha hide">>
 <<jump D3_MC_Lab1>>
 ===
 
 title: D3_Lunch_Nancy
 ---
+You grab your tray and head to the quiet table near the library entrance. 
+Nancy looks up from her stack of papers and gives a polite smile.
 <<SetMood "Nancy neutral">>
-You grab your tray and head to the quiet table near the library entrance. Nancy looks up from her stack of papers and gives a polite smile.
-
 Nancy: Hey, {$playerName}. You decided to join the quiet side today?
 
 {$playerName}: Someone has to balance out all the chaos in this school.
 
 Nancy: *raises an eyebrow* Is that your way of saying I’m boring?
-
+<<SetMood "Nancy angry">>
 {$playerName}: Not boring… just focused. I like that.
 
-<<SetMood "Nancy hide">>
 Nancy chuckles softly and gestures to the empty seat across from her.
 
-Nancy: Sit. I promise I don’t bite… much.
-
+Nancy: Sit. I promise I don’t bite… not now atleast.
+    <<SetMood "Nancy happy">>
 -> A. So… do all vice presidents look this good while working, or is it just you?
     <<jump D3_Lunch_Nancy_A>>
 -> B. Well, I have to say… you make “tedious” look… impressive.
@@ -417,15 +416,15 @@ Nancy: Sit. I promise I don’t bite… much.
 
 title: D3_Lunch_Nancy_A
 ---
-    <<SetMood "Nancy neutral">>
+    <<SetMood "Nancy happy">>
 Nancy’s eyes narrow, and a faint blush appears.
 
 Nancy: *coldly* That’s inappropriate.
-
+<<SetMood "Nancy angry">>
 {$playerName}: *laughs awkwardly* I was just joking…
 
 Nancy: *sighs* Some of us take our work seriously, {$playerName}. I don’t have time for… distractions.
-
+<<SetMood "Nancy neutral">>
 The mood instantly shifts. Nancy closes her notebook and sits up straighter, clearly annoyed. Your teasing has backfired, and she barely speaks for the rest of lunch.
 
 The bell rings, signaling the end of lunch. You leave the library quietly, realizing you’ve lost some goodwill with Nancy this time.
@@ -452,7 +451,7 @@ Nancy’s blush deepens, and she clears her throat, looking away briefly.
 Nancy: *muttering* You’re impossible…
 
 You both continue talking, joking lightly and teasing, and the mood feels playful, warm, and subtly flirty. The bell rings, signaling the end of lunch. Nancy says a quick bye before she hurries off. You follow a little slower.
-
+<<SetMood "Nancy hide">>
 <<jump D3_MC_Lab1>>
 ===
 
@@ -476,27 +475,44 @@ Emiko by the window.
 Who do you partner with?
     -> Nancy
         <<SetMood "Nancy neutral">>
-        Nancy: Working together could be… efficient.
-        {$playerName}: Sounds like a good excuse to spend time with the smartest girl in class.
-        Nancy blushes slightly.
-        Nancy: Just don’t mess up the experiment.
+        You approach Nancy.
+        {$playerName}: Hey, mind if I partner with you?
+        Nancy: *glances up, slightly surprised* Oh… sure. I suppose working together could be… efficient.
+        {$playerName}: Efficient, huh? Sounds like a perfect excuse to spend time with the smartest girl in class.
+        Nancy’s cheeks tint pink, and she clears her throat.
+        Nancy: Don’t push your luck, Mc. But… try not to mess up the experiment, okay?
+        You both set up your materials. As you work, you exchange ideas and joke lightly, with Nancy occasionally teasing you about small mistakes while secretly enjoying your presence.
+
         <<SetMood "Nancy hide">>
     -> Takiko
         <<SetMood "Takiko neutral">>
-        Takiko: You sure you can keep up?
-        {$playerName}: I like a challenge.
-        Takiko blushes faintly.
-        Takiko: Don’t get cocky.
+        You walk over to Takiko.
+        {$playerName}: Mind if I join you for this lab?
+        Takiko: *crossing her arms, smirking* Hah… you sure you can keep up? I don’t go easy on partners.
+        {$playerName}: *grinning* Good. I like a challenge.
+        Takiko: *narrows her eyes, flustered just slightly* Don’t get cocky…
+        As you work together, Takiko’s competitive side comes out—she corrects you, measures carefully, and tries to push you to do better, all while her cheeks tint slightly whenever you tease her.
+        {$playerName}: Don’t worry, I can handle being bossed around… especially by someone as intense as you.
+        Takiko: *blushes faintly, turning away* I-I’m not intense!
+        The lab continues with playful tension as you both carefully complete the experiment, her tsundere personality keeping things lively.
+
         <<SetMood "Takiko hide">>
     -> Emiko
         <<SetMood "Emiko happy">>
-        Emiko: Sure! That’d be nice.
-        {$playerName}: Working with you might make chemistry my favorite subject.
-        Emiko laughs shyly.
-        Emiko: You’re such a goof.
+        You walk over to Emiko.
+        {$playerName}: Hey… want to partner up for this lab?
+        Emiko: *smiles softly* Sure! That’d be nice.
+        {$playerName}: You know, working with you might just make chemistry my favorite subject.
+        Emiko blushes faintly and laughs.
+        Emiko: *shyly* You’re… such a goof sometimes…
+        As you set up your materials, you and Emiko chat quietly, laughing softly whenever one of you makes a small mistake. The mood is calm, light, and playful, letting you bond naturally.
+        {$playerName} (thought): This is… nice. Feels like it’s just the two of us here.
+
         <<SetMood "Emiko hide">>
 
-The bell rings as the experiment finishes.
+The teacher walks around, checking each group’s progress. 
+The class hums with quiet conversation, laughter, and the occasional hiss of the burners.
+The bell rings, and students start packing up. You feel a little closer to your partner as you head to your next class.
 
 <<NextDay>>
 
