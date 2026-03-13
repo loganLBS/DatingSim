@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ville Dos.unity
     guid: e00644cedb4428f4782ab96d21239dc3
+  - enabled: 1
+    path: Assets/Scenes/Ville Dag 3.unity
+    guid: 1e1b8658c82c234478d3ef8f7f6e65e5
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: d918c9b3ebc072349afe0fc99461cfbe, type: 3}
   m_UseUCBPForAssetBundles: 0
