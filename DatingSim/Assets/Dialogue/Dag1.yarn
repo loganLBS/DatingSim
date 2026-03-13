@@ -16,10 +16,11 @@ title: D1_MC_Start1
 Cassie: I'm Cassie!
     <<SetMood "Cassie happy">>
 Cassie: What’s your name handsome?
+    <<SetMainMood hide>>
     <<SetMood "Cassie neutral">>
-    <<SetMainMood neutral>>
     <<ShowNameInput SceneManager>>
     <<wait 3>>>
+    <<SetMainMood neutral2>>
 Cassie: Okay {$playerName}, you must be heading to the reception, right? 
 Cassie: It’s the first door on the right when you enter the school. 
     <<SetMood "Cassie happy">>
@@ -27,10 +28,9 @@ Cassie: I'm late so gotta run! Bye-bye!!
     <<SetMood "Cassie hide">>
     <<SetMainMood flushed>>
 {$playerName}: B-Bye
-    <<wait 1>>
-    <<SetMainMood neutral2>>
-    <<SetMood hide>>
     <<SetMainMood hide>>
+    <<wait 1>>
+    <<SetMood hide>>
 <<jump D1_N_Reception1>>
 ===
 
@@ -38,6 +38,7 @@ title: D1_N_Reception1
 ---
   <<bg reception>>
     <<wait 1>>
+    <<SetMainMood neutral>>
 A tall girl with glasses waits next to the desk. You make eye contact.
         <<SetMood "Nancy unknown">>
 ???: Hello.. Are you {$playerName}? I was supposed to show you around the school.
@@ -54,6 +55,7 @@ Nancy: Follow me. Lunch starts in thirty minutes, and this place is bigger than 
         <<SetMood "Nancy hide">>
 She turns without waiting to see if you agree.
 <<SetMainMood neutral>>
+<<SetMainMood hide>>
     <<wait 1>>
 <<jump D1_E_Cafeteria1>>
 ===
@@ -61,10 +63,14 @@ She turns without waiting to see if you agree.
 title: D1_E_Cafeteria1
 ---
      <<wait 1>>
+     <<SetMainMood happy>>
 You say bye to Nancy as you make your way to the cafeteria for lunch.
+<<SetMainMood hide>>
 <<bg corridor>>
 <<wait 1>>
+<<SetMainMood neutral2>>
 You bump into something
+    <<SetMainMood angry>>
       <<SetMood "Takiko unknown">>
 ???: Hey! watch where you're going, idiot!
 <<SetMainMood flushed>>
@@ -73,10 +79,12 @@ You bump into something
 ???: Get out of my way, germfest.
 <<SetMainMood neutral2>>
 {$playerName}: *what’s her problem.*
+      <<SetMainMood hide>>
       <<SetMood "Takiko hide">>
     <<wait 1>>
     <<bg cafeteria>>
     <<wait 1>>
+    <<SetMainMood neutral>>
 Searching for a table to sit at you find a girl sitting all alone.
 <<SetMainMood flushed>>
 {$playerName}: Excuse me, can I sit here?
@@ -126,6 +134,7 @@ Emiko is gesturing for your name
 {$playerName}: {$playerName}
 Emiko: {$playerName}, catch you later. 
      <<SetMood "Emiko hide">>
+     <<SetMainMood hide>>
     <<jump D1_B_Classroom1>>
 ===
 
@@ -158,6 +167,7 @@ She gestures down the corridor.
 Emiko: Class is about to start, we should get going.
 <<SetMainMood neutral2>>
     <<SetMood "Emiko hide">>
+     <<SetMainMood hide>>
     <<jump D1_B_Classroom1>>
 ===
 
@@ -181,6 +191,7 @@ She starts walking, posture perfectly straight.
 <<SetMainMood angry>>
 {$playerName}: *Great. First day, and I already offended someone.*
     <<SetMood "Emiko hide">>
+     <<SetMainMood hide>>
 <<wait 1>>
     <<jump D1_B_Classroom1>>
 
@@ -276,6 +287,7 @@ Bebe: Don’t overthink it, Trouble. Life’s more fun when you roll with the ch
     <<SetMainMood flushed>>
 She nudges you lightly with her elbow, playful and teasing. Before they walk away together chatting to themselves
     <<SetMood "Bebe hide">>
+    <<SetMainMood hide>>
     <<NextDay>>
 
 ===
@@ -305,5 +317,6 @@ Bebe: Life isn’t always fair… but I can make it fun.
 Cassie’s bubbly laugh joins her friend as they join arms.
 Cassie: Byee Suger! We got shopping to do! 
 She blows a kiss as they walk away
+<<SetMainMood hide>>
 <<NextDay>>
 ===
