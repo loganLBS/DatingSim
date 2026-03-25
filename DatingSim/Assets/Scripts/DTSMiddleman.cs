@@ -46,8 +46,8 @@ public class DTSMiddleman : MonoBehaviour
             dialogueRunner.AddCommandHandler("ShowEmikoTrust", DetT);
             dialogueRunner.AddCommandHandler("ShowTakikoTrust", DttT);
             dialogueRunner.AddCommandHandler("ShowSashaTrust", DstT);
-
-
+            dialogueRunner.AddCommandHandler("HideSlider", HideSlider);
+            dialogueRunner.AddCommandHandler("ShowSlider", ShowSlider);
             UnityEngine.Debug.Log("Yarn command 'Character Trust Commands' registered successfully");
         }
         else
@@ -59,7 +59,14 @@ public class DTSMiddleman : MonoBehaviour
     {
         trustSlider.value = trust;
     }
-
+    public void HideSlider()
+    {
+        trustSlider.gameObject.SetActive(false);
+    }
+    public void ShowSlider()
+    {
+        trustSlider.gameObject.SetActive(true);
+    }
     [YarnCommand("Save")]
     public void SaveGame()
     {
@@ -178,5 +185,4 @@ public class DTSMiddleman : MonoBehaviour
     {
         trustSlider.value = sashaTrust;
     }
-
 }
